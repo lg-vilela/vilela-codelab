@@ -2,7 +2,7 @@ import React from 'react';
 
 const Pricing: React.FC = () => {
   const whatsappLink = "https://wa.me/5511953840339";
-
+  
   const proposalLinks = {
     express: "https://bit.ly/vilelacodelab-plano1",
     pro: "https://bit.ly/vilelacodelab-plano2",
@@ -11,25 +11,27 @@ const Pricing: React.FC = () => {
 
   const ActionButtons = ({ whatsappUrl, proposalUrl, isFeatured = false }: { whatsappUrl: string, proposalUrl: string, isFeatured?: boolean }) => (
     <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mt-6">
-      <a
+      <a 
         href={proposalUrl}
         target="_blank"
         rel="noopener noreferrer"
-        className={`flex items-center justify-center rounded-lg h-12 px-2 text-[11px] font-bold transition-all cursor-pointer border ${isFeatured
-            ? 'bg-white/10 border-white/20 text-white hover:bg-white/20'
+        className={`flex items-center justify-center rounded-lg h-12 px-2 text-[11px] font-bold transition-all cursor-pointer border ${
+          isFeatured 
+            ? 'bg-white/10 border-white/20 text-white hover:bg-white/20' 
             : 'bg-white/5 border-white/5 text-white hover:bg-white/10'
-          }`}
+        }`}
       >
         <span className="truncate">Consultar Proposta</span>
       </a>
-      <a
+      <a 
         href={whatsappUrl}
         target="_blank"
         rel="noopener noreferrer"
-        className={`flex items-center justify-center rounded-lg h-12 px-2 text-[11px] font-bold transition-all cursor-pointer shadow-md ${isFeatured
-            ? 'bg-primary hover:bg-primary-dark text-white scale-100 hover:scale-[1.02] active:scale-95'
+        className={`flex items-center justify-center rounded-lg h-12 px-2 text-[11px] font-bold transition-all cursor-pointer shadow-md ${
+          isFeatured 
+            ? 'bg-primary hover:bg-primary-dark text-white scale-100 hover:scale-[1.02] active:scale-95' 
             : 'bg-white/10 hover:bg-white/20 text-white border border-white/5'
-          }`}
+        }`}
       >
         <span className="truncate">Falar com Consultor</span>
       </a>
@@ -47,18 +49,17 @@ const Pricing: React.FC = () => {
           Estruturas focadas em resultados, desde a validação rápida até operações de alta escala.
         </p>
       </div>
-
+      
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch">
         {/* Plano: Express */}
         <div className="group relative flex flex-col gap-4 rounded-2xl border border-white/5 bg-[#0F172A] p-8 hover:-translate-y-2 transition-all duration-500 shadow-lg glass-effect">
           <div className="flex flex-col gap-1">
             <div className="flex items-center justify-between">
-              <h3 className="text-white text-2xl font-bold group-hover:text-primary transition-colors">Plano Express</h3>
+              <h3 className="text-white text-2xl font-bold group-hover:text-primary transition-colors">Express</h3>
               <span className="text-primary text-[9px] font-black tracking-[0.2em] uppercase rounded-lg bg-primary/10 border border-primary/20 px-3 py-1">Validação</span>
             </div>
-            <p className="text-primary text-sm font-bold mt-1">O Salto Inicial para o Mercado</p>
             <p className="text-slate-400 text-sm font-medium mt-4 leading-relaxed">
-              Este plano foi desenhado para quem tem pressa em converter e precisa de retorno imediato. É a solução perfeita para colocar seu produto no mercado agora e atrair os primeiros clientes sem qualquer complicação. Com um design focado estrategicamente em levar o visitante direto para o botão de compra ou contato, garantimos que sua marca cause impacto desde o primeiro segundo. Além de ser totalmente otimizado para abrir de forma impecável e rápida em qualquer smartphone, entregamos as configurações básicas de SEO para que as pessoas te encontrem nas buscas do Google. Tudo isso com uma velocidade recorde: seu negócio online estará no ar em apenas 7 dias úteis.
+              Ideal para validação rápida de infoprodutos e captação de leads focada.
             </p>
           </div>
           <div className="h-px bg-gradient-to-r from-primary/20 via-primary/5 to-transparent w-full my-4"></div>
@@ -85,10 +86,9 @@ const Pricing: React.FC = () => {
         <div className="group relative flex flex-col gap-4 rounded-2xl border-2 border-primary bg-[#0F172A] p-8 shadow-[0_0_50px_rgba(94,125,162,0.2)] hover:-translate-y-2 transition-all duration-500 md:-mt-8">
           <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-primary text-white text-[10px] font-black px-6 py-2 rounded-full uppercase tracking-[0.2em] shadow-xl">Recomendado</div>
           <div className="flex flex-col gap-1 mt-4">
-            <h3 className="text-white text-3xl font-black">Plano Pro</h3>
-            <p className="text-primary text-sm font-bold">Crescimento com Autonomia Total</p>
+            <h3 className="text-white text-3xl font-black">Landing Page Pro</h3>
             <p className="text-slate-400 text-sm font-medium mt-4 leading-relaxed">
-              Nossa solução "carro-chefe" é focada em empresas que já estão vendendo e buscam uma estrutura profissional para transmitir confiança e autoridade inquestionáveis. O grande diferencial aqui é o poder que entregamos a você: através de um painel simples e intuitivo (CMS), você assume o controle para alterar textos e fotos sozinho, sem depender de programadores. Para potencializar seus resultados, conectamos seu site diretamente às suas ferramentas de e-mail e vendas (CRM), automatizando a organização dos seus contatos. Fugindo de modelos prontos, criamos um visual exclusivo que torna sua marca inesquecível, tudo acompanhado por relatórios detalhados para que você saiba exatamente quem clicou em seus anúncios e como seu investimento está performando.
+              Ferramenta de vendas completa com foco em automação e exclusividade visual.
             </p>
           </div>
           <div className="h-px bg-primary/20 w-full my-4"></div>
@@ -115,12 +115,11 @@ const Pricing: React.FC = () => {
         <div className="group relative flex flex-col gap-4 rounded-2xl border border-white/5 bg-[#0F172A] p-8 hover:-translate-y-2 transition-all duration-500 shadow-lg glass-effect">
           <div className="flex flex-col gap-1">
             <div className="flex items-center justify-between">
-              <h3 className="text-white text-2xl font-bold group-hover:text-primary transition-colors">Plano Premium</h3>
+              <h3 className="text-white text-2xl font-bold group-hover:text-primary transition-colors">Premium</h3>
               <span className="text-primary text-[9px] font-black tracking-[0.2em] uppercase rounded-lg bg-primary/10 border border-primary/20 px-3 py-1">Squad</span>
             </div>
-            <p className="text-primary text-sm font-bold mt-1">Estabilidade e Elite Digital</p>
             <p className="text-slate-400 text-sm font-medium mt-4 leading-relaxed">
-              Para operações de alto faturamento que exigem o máximo de performance, criamos o plano Premium, onde o foco é a estabilidade absoluta e o atendimento VIP. Sua empresa contará com um time de especialistas dedicado exclusivamente ao seu projeto, garantindo o melhor resultado técnico e visual do mercado. Além do suporte prioritário para ajustes imediatos, sua página será sustentada por uma infraestrutura de alta tecnologia, preparada para suportar milhares de acessos simultâneos durante grandes lançamentos ou picos de tráfego. É o cuidado permanente que sua operação merece, com monitoramento 24h por dia para assegurar que seu ativo digital esteja sempre rápido, seguro e online.
+              Para grandes operações que exigem máxima performance e squad dedicada.
             </p>
           </div>
           <div className="h-px bg-gradient-to-r from-primary/20 via-primary/5 to-transparent w-full my-4"></div>
