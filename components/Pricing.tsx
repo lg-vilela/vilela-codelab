@@ -1,31 +1,25 @@
-import React from 'react';
+import React, { useState } from 'react';
+import PlanDetailsModal from './PlanDetailsModal';
 
 interface PricingProps {
   onQuoteRequest?: () => void;
 }
 
 const Pricing: React.FC<PricingProps> = ({ onQuoteRequest = () => { } }) => {
+  const [selectedPlan, setSelectedPlan] = useState<'express' | 'pro' | 'premium' | null>(null);
   const whatsappLink = "https://wa.me/5511953840339";
 
-  const proposalLinks = {
-    express: "https://bit.ly/vilelacodelab-plano1",
-    pro: "https://bit.ly/vilelacodelab-plano2",
-    premium: "https://bit.ly/vilelacodelab-plano3"
-  };
-
-  const ActionButtons = ({ whatsappUrl, proposalUrl, isFeatured = false, onQuoteRequest }: { whatsappUrl: string, proposalUrl: string, isFeatured?: boolean, onQuoteRequest: () => void }) => (
+  const ActionButtons = ({ whatsappUrl, isFeatured = false, onQuoteRequest, onDetailsClick }: { whatsappUrl: string, isFeatured?: boolean, onQuoteRequest: () => void, onDetailsClick: () => void }) => (
     <div className="grid grid-cols-1 gap-3 mt-6">
-      <a
-        href={proposalUrl}
-        target="_blank"
-        rel="noopener noreferrer"
+      <button
+        onClick={onDetailsClick}
         className={`flex items-center justify-center rounded-lg py-3 px-2 text-[11px] font-bold transition-all cursor-pointer border h-auto whitespace-normal text-center ${isFeatured
           ? 'bg-white/10 border-white/20 text-white hover:bg-white/20'
           : 'bg-white/5 border-white/5 text-white hover:bg-white/10'
           }`}
       >
         <span>Consultar Proposta</span>
-      </a>
+      </button>
       <button
         onClick={onQuoteRequest}
         className={`flex items-center justify-center rounded-lg py-3 px-2 text-[11px] font-bold transition-all cursor-pointer shadow-md h-auto whitespace-normal text-center ${isFeatured
@@ -40,7 +34,7 @@ const Pricing: React.FC<PricingProps> = ({ onQuoteRequest = () => { } }) => {
 
   return (
     <div id="pricing" className="px-4 py-24 reveal-on-scroll">
-      <div className="flex flex-col gap-2 mb-10 text-center">
+      <div className="flex flex-col gap-2 mb-20 text-center">
         <div className="text-primary font-black tracking-[0.4em] uppercase text-[9px] mb-1">Investment Tiers</div>
         <h2 className="text-white text-5xl md:text-7xl font-black tracking-tighter uppercase text-glow-primary leading-none">
           Planos de <span className="text-primary italic">Serviços</span>
@@ -79,7 +73,11 @@ const Pricing: React.FC<PricingProps> = ({ onQuoteRequest = () => { } }) => {
               </div>
             ))}
           </div>
-          <ActionButtons whatsappUrl={whatsappLink} proposalUrl={proposalLinks.express} onQuoteRequest={onQuoteRequest} />
+          <ActionButtons
+            whatsappUrl={whatsappLink}
+            onQuoteRequest={onQuoteRequest}
+            onDetailsClick={() => setSelectedPlan('express')}
+          />
         </div>
 
         {/* Plano: Pro (Featured) */}
@@ -108,7 +106,12 @@ const Pricing: React.FC<PricingProps> = ({ onQuoteRequest = () => { } }) => {
               </div>
             ))}
           </div>
-          <ActionButtons whatsappUrl={whatsappLink} proposalUrl={proposalLinks.pro} isFeatured={true} onQuoteRequest={onQuoteRequest} />
+          <ActionButtons
+            whatsappUrl={whatsappLink}
+            isFeatured={true}
+            onQuoteRequest={onQuoteRequest}
+            onDetailsClick={() => setSelectedPlan('pro')}
+          />
         </div>
 
         {/* Plano: Premium */}
@@ -139,9 +142,19 @@ const Pricing: React.FC<PricingProps> = ({ onQuoteRequest = () => { } }) => {
               </div>
             ))}
           </div>
-          <ActionButtons whatsappUrl={whatsappLink} proposalUrl={proposalLinks.premium} onQuoteRequest={onQuoteRequest} />
+          <ActionButtons
+            whatsappUrl={whatsappLink}
+            onQuoteRequest={onQuoteRequest}
+            onDetailsClick={() => setSelectedPlan('premium')}
+          />
         </div>
       </div>
+
+      <PlanDetailsModal
+        isOpen={!!selectedPlan}
+        onClose={() => setSelectedPlan(null)}
+        planType={selectedPlan}
+      />
     </div>
   );
 };
