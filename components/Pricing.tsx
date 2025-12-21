@@ -1,40 +1,40 @@
 import React from 'react';
 
-const Pricing: React.FC = () => {
+interface PricingProps {
+  onQuoteRequest?: () => void;
+}
+
+const Pricing: React.FC<PricingProps> = ({ onQuoteRequest = () => { } }) => {
   const whatsappLink = "https://wa.me/5511953840339";
-  
+
   const proposalLinks = {
     express: "https://bit.ly/vilelacodelab-plano1",
     pro: "https://bit.ly/vilelacodelab-plano2",
     premium: "https://bit.ly/vilelacodelab-plano3"
   };
 
-  const ActionButtons = ({ whatsappUrl, proposalUrl, isFeatured = false }: { whatsappUrl: string, proposalUrl: string, isFeatured?: boolean }) => (
-    <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mt-6">
-      <a 
+  const ActionButtons = ({ whatsappUrl, proposalUrl, isFeatured = false, onQuoteRequest }: { whatsappUrl: string, proposalUrl: string, isFeatured?: boolean, onQuoteRequest: () => void }) => (
+    <div className="grid grid-cols-1 gap-3 mt-6">
+      <a
         href={proposalUrl}
         target="_blank"
         rel="noopener noreferrer"
-        className={`flex items-center justify-center rounded-lg h-12 px-2 text-[11px] font-bold transition-all cursor-pointer border ${
-          isFeatured 
-            ? 'bg-white/10 border-white/20 text-white hover:bg-white/20' 
-            : 'bg-white/5 border-white/5 text-white hover:bg-white/10'
-        }`}
+        className={`flex items-center justify-center rounded-lg py-3 px-2 text-[11px] font-bold transition-all cursor-pointer border h-auto whitespace-normal text-center ${isFeatured
+          ? 'bg-white/10 border-white/20 text-white hover:bg-white/20'
+          : 'bg-white/5 border-white/5 text-white hover:bg-white/10'
+          }`}
       >
-        <span className="truncate">Consultar Proposta</span>
+        <span>Consultar Proposta</span>
       </a>
-      <a 
-        href={whatsappUrl}
-        target="_blank"
-        rel="noopener noreferrer"
-        className={`flex items-center justify-center rounded-lg h-12 px-2 text-[11px] font-bold transition-all cursor-pointer shadow-md ${
-          isFeatured 
-            ? 'bg-primary hover:bg-primary-dark text-white scale-100 hover:scale-[1.02] active:scale-95' 
-            : 'bg-white/10 hover:bg-white/20 text-white border border-white/5'
-        }`}
+      <button
+        onClick={onQuoteRequest}
+        className={`flex items-center justify-center rounded-lg py-3 px-2 text-[11px] font-bold transition-all cursor-pointer shadow-md h-auto whitespace-normal text-center ${isFeatured
+          ? 'bg-primary hover:bg-primary-dark text-white scale-100 hover:scale-[1.02] active:scale-95'
+          : 'bg-white/10 hover:bg-white/20 text-white border border-white/5'
+          }`}
       >
-        <span className="truncate">Falar com Consultor</span>
-      </a>
+        <span>Falar com Consultor</span>
+      </button>
     </div>
   );
 
@@ -49,7 +49,7 @@ const Pricing: React.FC = () => {
           Estruturas focadas em resultados, desde a validação rápida até operações de alta escala.
         </p>
       </div>
-      
+
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch">
         {/* Plano: Express */}
         <div className="group relative flex flex-col gap-4 rounded-2xl border border-white/5 bg-[#0F172A] p-8 hover:-translate-y-2 transition-all duration-500 shadow-lg glass-effect">
@@ -79,7 +79,7 @@ const Pricing: React.FC = () => {
               </div>
             ))}
           </div>
-          <ActionButtons whatsappUrl={whatsappLink} proposalUrl={proposalLinks.express} />
+          <ActionButtons whatsappUrl={whatsappLink} proposalUrl={proposalLinks.express} onQuoteRequest={onQuoteRequest} />
         </div>
 
         {/* Plano: Pro (Featured) */}
@@ -108,7 +108,7 @@ const Pricing: React.FC = () => {
               </div>
             ))}
           </div>
-          <ActionButtons whatsappUrl={whatsappLink} proposalUrl={proposalLinks.pro} isFeatured={true} />
+          <ActionButtons whatsappUrl={whatsappLink} proposalUrl={proposalLinks.pro} isFeatured={true} onQuoteRequest={onQuoteRequest} />
         </div>
 
         {/* Plano: Premium */}
@@ -139,7 +139,7 @@ const Pricing: React.FC = () => {
               </div>
             ))}
           </div>
-          <ActionButtons whatsappUrl={whatsappLink} proposalUrl={proposalLinks.premium} />
+          <ActionButtons whatsappUrl={whatsappLink} proposalUrl={proposalLinks.premium} onQuoteRequest={onQuoteRequest} />
         </div>
       </div>
     </div>

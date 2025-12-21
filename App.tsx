@@ -12,17 +12,17 @@ const ManifestoModal = ({ isOpen, onClose }: { isOpen: boolean; onClose: () => v
   if (!isOpen) return null;
 
   return (
-    <div 
+    <div
       className="fixed inset-0 z-[100] flex items-center justify-center p-4 md:p-8 animate-fade-in-down"
       onClick={(e) => e.target === e.currentTarget && onClose()}
     >
       {/* Backdrop */}
       <div className="absolute inset-0 bg-background-dark/80 backdrop-blur-md"></div>
-      
+
       {/* Modal Content */}
       <div className="relative w-full max-w-4xl max-h-[90vh] overflow-y-auto bg-card-dark border border-primary/30 rounded-3xl p-8 md:p-12 glass-effect shadow-[0_0_100px_rgba(94,125,162,0.2)] scrollbar-hide cyber-card">
         {/* Close Button */}
-        <button 
+        <button
           onClick={onClose}
           className="absolute top-6 right-6 text-primary/60 hover:text-primary transition-colors flex items-center gap-2 text-[10px] font-black uppercase tracking-widest"
         >
@@ -120,7 +120,7 @@ export default function App() {
 
   const handleNavigate = (screen: 'home' | 'quote', sectionId?: string) => {
     setCurrentScreen(screen);
-    
+
     if (screen === 'home') {
       setTimeout(() => {
         if (sectionId) {
@@ -141,18 +141,18 @@ export default function App() {
     <div className="bg-transparent font-display text-white overflow-x-hidden antialiased selection:bg-primary selection:text-white min-h-screen flex flex-col">
       <div className="layout-container flex h-full grow flex-col w-full">
         <Navbar onNavigate={handleNavigate} />
-        
+
         <main className="flex flex-1 justify-center py-5 w-full">
           <div className="layout-content-container flex flex-col max-w-[960px] flex-1 w-full">
             {currentScreen === 'home' ? (
               <>
-                <Hero 
-                  onExploreClick={() => handleNavigate('home', 'pricing')} 
+                <Hero
+                  onExploreClick={() => handleNavigate('home', 'pricing')}
                   onManifestoClick={() => setIsManifestoOpen(true)}
                 />
                 <Services />
                 <Process />
-                <Pricing />
+                <Pricing onQuoteRequest={() => handleNavigate('quote')} />
                 <CtaSection onNavigate={() => handleNavigate('quote')} />
               </>
             ) : (
