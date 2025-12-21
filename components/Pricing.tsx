@@ -97,7 +97,7 @@ const Pricing: React.FC = () => {
               { title: "CMS Gerenciável", desc: "Painel Admin intuitivo" },
               { title: "Automação CRM", desc: "Integração HubSpot/RD Station" },
               { title: "Design System", desc: "Identidade proprietária" },
-              { title: "Análise de Dados", desc: "Google Analytics & Pixels" }
+              { title: "Análise de Dados", desc: "Supabase" }
             ].map((item, i) => (
               <div key={i} className="flex gap-4 items-start">
                 <span className="material-symbols-outlined text-primary text-xl">workspace_premium</span>
