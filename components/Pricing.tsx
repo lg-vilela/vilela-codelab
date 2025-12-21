@@ -125,7 +125,7 @@ const Pricing: React.FC = () => {
           <div className="h-px bg-gradient-to-r from-primary/20 via-primary/5 to-transparent w-full my-4"></div>
           <div className="flex flex-col gap-5 flex-1">
             {[
-              { title: "Squad Dedicada", desc: "Devs + Designers exclusivos" },
+              { title: "Squad Dedicada", desc: "Desenvolvimento e Design Exclusivo" },
               { title: "SLA Prioritário", desc: "Atendimento de alta resposta" },
               { title: "Cloud Complexa", desc: "Infraestrutura escalável" },
               { title: "Manutenção 24/7", desc: "Otimização técnica contínua" }
