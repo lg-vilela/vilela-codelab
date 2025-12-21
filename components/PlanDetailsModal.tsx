@@ -74,7 +74,7 @@ const PlanDetailsModal: React.FC<PlanDetailsModalProps> = ({ isOpen, onClose, pl
             <div className="absolute inset-0 bg-background-dark/80 backdrop-blur-md"></div>
 
             {/* Modal Content */}
-            <div className="relative w-full max-w-2xl max-h-[90vh] overflow-y-auto bg-card-dark border border-primary/30 rounded-3xl p-8 md:p-10 glass-effect shadow-[0_0_100px_rgba(94,125,162,0.2)] scrollbar-hide cyber-card">
+            <div className="relative w-full max-w-2xl max-h-[90vh] overflow-y-auto bg-gradient-to-br from-[#0F172A]/95 via-[#1e293b]/95 to-[#0F172A]/95 border border-primary/30 rounded-3xl p-8 md:p-10 glass-effect shadow-[0_0_100px_rgba(94,125,162,0.2)] scrollbar-hide cyber-card">
                 {/* Close Button */}
                 <button
                     onClick={onClose}
