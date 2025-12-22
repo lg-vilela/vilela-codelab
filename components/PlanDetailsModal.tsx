@@ -53,18 +53,22 @@ const planDetails = {
         ]
     },
     premium: {
-        title: "Premium - Sob Medida",
-        subtitle: "Soluções para operações que exigem arquitetura escalável e time dedicado.",
+        title: "Sites Enterprise",
+        subtitle: "Engenharia de Software e Ecossistemas Digitais de Alta Complexidade\n\nO Plano Enterprise é a solução definitiva para corporações que não buscam apenas uma presença digital, mas um ativo tecnológico escalável, seguro e de alta disponibilidade. Aqui, desenvolvemos Sites Completos e sistemas personalizados, desenhados para suportar operações de alto volume e grande responsabilidade técnica.",
         features: [
-            { title: "Projeto Enterprise", desc: "Alto ticket, alta responsabilidade e infraestrutura complexa." },
-            { title: "Infraestrutura do Cliente", desc: "Contas criadas nas plataformas Vercel (hospedagem), Supabase (base de dados) e Umami (Analytics)." },
-            { title: "Parceria Técnica", desc: "A Vilela CodeLab entra como parceiro técnico do cliente, garantindo alta disponibilidade." }
+            { title: "A Parceria Técnica Estratégica", desc: "" },
+            { title: "Squad Dedicada", desc: "Um time de especialistas exclusivo para o desenvolvimento, design e manutenção do seu site." },
+            { title: "SLA Prioritário", desc: "Garantia de atendimento técnico de alta resposta para operações que não podem parar." },
+            { title: "Gestão de Infraestrutura Complexa", desc: "Monitoramento contínuo de arquiteturas de nuvem avançadas para garantir estabilidade e escala." },
+            { title: "Soberania Digital e Arquitetura Enterprise", desc: "" },
+            { title: "Infraestrutura no Nome do Cliente", desc: "Obrigatoriamente, as contas de hospedagem, base de dados e análise são criadas em nome da sua empresa." },
+            { title: "Propriedade Total do Ativo", desc: "O cliente detém a posse absoluta do código-fonte e de todos os dados gerados." },
+            { title: "Escalabilidade e Segurança", desc: "Arquitetura desenhada para absorver picos de tráfego e proteger informações críticas do negócio." },
+            { title: "Regra de Ouro (Compliance Técnica)", desc: "" },
+            { title: "Diretriz Inegociável", desc: "Para garantir a segurança jurídica e operacional, a Vilela CodeLab segue a diretriz inegociável de nunca hospedar projetos Enterprise em infraestrutura própria. O projeto é um patrimônio do cliente." },
+            { title: "Nota de Briefing", desc: "Por se tratar de soluções sob medida (Enterprise), a stack tecnológica e o escopo do site são definidos em reuniões estratégicas de alto nível." }
         ],
-        timeline: [
-            "Fase 1: Imersão (Semana 1)",
-            "Fase 2: Desenvolvimento (Semanas 2-3)",
-            "Fase 3: Homologação (Semana 4)"
-        ]
+        timeline: []
     }
 };
 
