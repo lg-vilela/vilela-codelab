@@ -38,9 +38,9 @@ const planDetails = {
             { title: "Nota Técnica", desc: "Os detalhes da arquitetura de nuvem e as ferramentas de automação são definidos de forma personalizada durante o briefing inicial." }
         ],
         timeline: [
-            "Fase 1 (Dias 1-2): Definição estratégica e briefing de automação.",
-            "Fase 2 (Dias 3-10): Engenharia de Performance, Design e Desenvolvimento do Sistema.",
-            "Fase 3 (Dias 11-15): Integração de dados, testes de estresse e entrega final."
+            "Fase 1 (Dia 1): Definição estratégica e briefing de automação.",
+            "Fase 2 (Dias 2-5): Engenharia de Performance, Design e Desenvolvimento do Sistema.",
+            "Fase 3 (Dias 6-7): Integração de dados, testes de estresse e entrega final."
         ]
     },
     premium: {
@@ -73,16 +73,19 @@ const PlanDetailsModal: React.FC<PlanDetailsModalProps> = ({ isOpen, onClose, pl
             <div className="absolute inset-0 bg-background-dark/80 backdrop-blur-md"></div>
 
             {/* Modal Content */}
-            <div className="relative w-full max-w-2xl max-h-[90vh] overflow-y-auto bg-gradient-to-br from-[#0F172A]/95 via-[#1e293b]/95 to-[#0F172A]/95 border border-primary/30 rounded-3xl p-8 md:p-10 glass-effect shadow-[0_0_100px_rgba(94,125,162,0.2)] [&::-webkit-scrollbar]:w-2 [&::-webkit-scrollbar-track]:bg-white/5 [&::-webkit-scrollbar-thumb]:bg-primary/50 [&::-webkit-scrollbar-thumb]:rounded-full hover:[&::-webkit-scrollbar-thumb]:bg-primary/70 cyber-card">
-                {/* Close Button */}
-                <button
-                    onClick={onClose}
-                    className="absolute top-6 right-6 text-primary/60 hover:text-primary transition-colors flex items-center gap-2 text-[10px] font-black uppercase tracking-widest z-10"
-                >
-                    Fechar <span className="material-symbols-outlined text-sm">close</span>
-                </button>
+            <div className="relative w-full max-w-2xl max-h-[90vh] overflow-y-auto bg-gradient-to-br from-[#0F172A]/95 via-[#1e293b]/95 to-[#0F172A]/95 border border-primary/30 rounded-3xl glass-effect shadow-[0_0_100px_rgba(94,125,162,0.2)] [&::-webkit-scrollbar]:w-2 [&::-webkit-scrollbar-track]:bg-white/5 [&::-webkit-scrollbar-thumb]:bg-primary/50 [&::-webkit-scrollbar-thumb]:rounded-full hover:[&::-webkit-scrollbar-thumb]:bg-primary/70 cyber-card">
 
-                <div className="flex flex-col gap-6">
+                {/* Sticky Header with Close Button */}
+                <div className="sticky top-0 z-50 flex justify-end p-4 bg-[#0F172A]/80 backdrop-blur-xl border-b border-white/5">
+                    <button
+                        onClick={onClose}
+                        className="text-primary/80 hover:text-primary transition-colors flex items-center gap-2 text-[10px] font-black uppercase tracking-widest bg-white/5 px-3 py-1.5 rounded-full hover:bg-white/10"
+                    >
+                        Fechar <span className="material-symbols-outlined text-sm">close</span>
+                    </button>
+                </div>
+
+                <div className="flex flex-col gap-6 p-8 md:p-10 md:pt-6">
                     <div className="flex flex-col gap-2">
                         <div className="text-primary font-black tracking-[0.4em] uppercase text-[9px]">Detalhes do Plano</div>
                         <h2 className="text-white text-3xl md:text-4xl font-black tracking-tighter uppercase text-glow-primary">

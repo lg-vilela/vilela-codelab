@@ -177,16 +177,21 @@ const Pricing: React.FC<PricingProps> = ({ onQuoteRequest = () => { } }) => {
           <div className="absolute inset-0 bg-background-dark/95 backdrop-blur-md"></div>
 
           {/* Modal Content - MAX WIDTH PARA CABER TUDO SEM SCROLL */}
-          <div className="relative w-full max-w-[95vw] xl:max-w-7xl max-h-[90vh] overflow-y-auto bg-[#0F172A] border border-white/10 rounded-3xl p-6 md:p-12 shadow-[0_0_100px_rgba(0,0,0,0.5)] cyber-card">
-            {/* Close Button */}
-            <button
-              onClick={() => setShowComparison(false)}
-              className="absolute top-6 right-6 text-white/60 hover:text-white transition-colors flex items-center gap-2 text-[10px] font-black uppercase tracking-widest z-10"
-            >
-              Fechar <span className="material-symbols-outlined text-sm">close</span>
-            </button>
+          <div className="relative w-full max-w-[95vw] xl:max-w-7xl max-h-[90vh] overflow-y-auto bg-[#0F172A] border border-white/10 rounded-3xl shadow-[0_0_100px_rgba(0,0,0,0.5)] cyber-card">
 
-            <ComparisonTable />
+            {/* Sticky Header */}
+            <div className="sticky top-0 z-50 flex justify-end p-4 bg-[#0F172A]/90 backdrop-blur-xl border-b border-white/5">
+              <button
+                onClick={() => setShowComparison(false)}
+                className="text-white/60 hover:text-white transition-colors flex items-center gap-2 text-[10px] font-black uppercase tracking-widest bg-white/5 px-3 py-1.5 rounded-full hover:bg-white/10"
+              >
+                Fechar <span className="material-symbols-outlined text-sm">close</span>
+              </button>
+            </div>
+
+            <div className="p-6 md:p-12 md:pt-4">
+              <ComparisonTable />
+            </div>
           </div>
         </div>
       )}
