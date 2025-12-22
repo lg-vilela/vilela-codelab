@@ -6,40 +6,65 @@ interface PlanDetailsModalProps {
     isOpen: boolean;
     onClose: () => void;
     planType: PlanType | null;
+    initialTab?: 'project' | 'subscription';
 }
 
 const planDetails = {
     express: {
         title: "Landing Page Express",
-        subtitle: "Validação Ágil e Conversão Imediata\n\nA solução definitiva para quem precisa colocar uma oferta no mercado com velocidade, sem abrir mão da engenharia de performance. Ideal para validação de campanhas, lançamentos de infoprodutos e páginas de vendas diretas.",
-        features: [
-            { title: "Como funciona o Modelo Express", desc: "" },
-            { title: "Conceito do Modelo", desc: "Este plano opera sob um modelo de Software como Serviço (SaaS), focado em reduzir seu custo inicial e eliminar qualquer preocupação com manutenção técnica." },
-            { title: "Modelo 100% Assinatura", desc: "Você paga pelo uso da plataforma através de mensalidades ou trimestralidades competitivas." },
-            { title: "Gestão e Manutenção Inclusas", desc: "A Vilela CodeLab cuida de toda a hospedagem e otimização contínua da página." },
-            { title: "Foco em Resultados", desc: "Estrutura otimizada para carregar instantaneamente, garantindo que nenhum lead seja perdido por lentidão." },
-            { title: "Entrega em 72 Horas", desc: "Entrega em 72 horas após o briefing de informações coletadas." },
-            { title: "Diferenciais Técnicos", desc: "" },
-            { title: "Alta Conversão", desc: "Layout desenhado com foco total em um Call to Action (CTA) único e persuasivo." },
-            { title: "Mobile-First", desc: "Prioridade absoluta na experiência em smartphones, onde ocorre a maior parte do tráfego atual." },
-            { title: "SEO Básico", desc: "Configuração de meta tags essenciais para garantir uma presença saudável nos motores de busca." },
-            { title: "Termos de Propriedade e Migração", desc: "" },
-            { title: "Diretrizes", desc: "Para manter a viabilidade deste plano de entrada, seguimos diretrizes claras de propriedade intelectual." },
-            { title: "Hospedagem Centralizada", desc: "A página permanece hospedada em servidores geridos pela Vilela CodeLab." },
-            { title: "Propriedade do Código", desc: "O código-base do plano Express é de propriedade exclusiva da Vilela CodeLab." },
-            { title: "Política de Cancelamento", desc: "Em caso de interrupção da assinatura, a exibição da página é suspensa." },
-            { title: "Opção de Compra Absoluta", desc: "Caso seu negócio cresça e você deseje obter a posse total da página e do código, oferecemos uma Taxa de Migração para transferência definitiva do ativo." }
+        modes: {
+            project: {
+                description: "Ideal para quem deseja independência total e a posse de um ativo digital próprio.\nNeste modelo, você adquire a propriedade intelectual do site, sem a necessidade de vínculos mensais com a CodeLab.",
+                features: [
+                    { title: "Objetivo Estratégico", desc: "Aquisição de um ativo digital pronto para uso com investimento único." },
+                    { title: "Infraestrutura Independente", desc: "O site é implementado diretamente na conta do cliente, garantindo total controle sobre o ambiente." },
+                    { title: "Custos de Terceiros", desc: "A responsabilidade financeira pelos provedores de hospedagem e domínio é do cliente." },
+                    { title: "Propriedade (IP)", desc: "O código e os ativos são 100% de propriedade do cliente após a entrega." },
+                    { title: "Manutenção", desc: "Não há cobrança recorrente; manutenções futuras são realizadas sob demanda." }
+                ]
+            },
+            subscription: {
+                description: "Ideal para quem busca validação imediata com gestão técnica simplificada.\nEste modelo funciona como um serviço gerenciado, onde a Vilela CodeLab assume a responsabilidade pela infraestrutura e manutenção da sua página.",
+                features: [
+                    { title: "Objetivo Estratégico", desc: "Foco total em validação rápida de ofertas e geração de tráfego direto." },
+                    { title: "Gestão de Infraestrutura", desc: "A página é hospedada e gerida integralmente em servidores da Vilela CodeLab." },
+                    { title: "Custos de Terceiros", desc: "Todos os custos de licenciamento e hospedagem profissional já estão inclusos no valor da assinatura." },
+                    { title: "Propriedade (IP)", desc: "O código-base pertence à Vilela CodeLab, sendo concedido o direito de uso enquanto a assinatura estiver ativa." },
+                    { title: "Taxa de Migração", desc: "Caso deseje a posse definitiva do projeto no futuro, aplica-se uma taxa de R$ 1.000,00 para transferência." }
+                ]
+            }
+        },
+        commonFeatures: [
+            { title: "Alta Conversão", desc: "Layout otimizado com foco em Call to Action (CTA) único." },
+            { title: "Mobile-First", desc: "Experiência de navegação prioritária para dispositivos móveis." },
+            { title: "Engenharia de Performance", desc: "Páginas leves, sem modelagem de dados complexa, focadas em redirecionamento direto para WhatsApp ou redes sociais." },
+            { title: "SEO Básico", desc: "Configuração fundamental de meta tags para motores de busca." }
         ],
-        timeline: []
+        timeline: [
+            "Fase 1: Alinhamento Estratégico: Definição de copy e links de conversão.",
+            "Fase 2: Engenharia & Design: Desenvolvimento da interface de alta performance.",
+            "Fase 3: Implementação e Entrega: Em até 72 horas."
+        ]
     },
     pro: {
         title: "Landing Page PRO",
-        subtitle: "Alta Performance e Automação Estratégica",
-        features: [
-            { title: "Escolha seu Modelo de Implementação", desc: "" },
-            { title: "1. Modo Assinatura (Gestão CodeLab)", desc: "Foco em Operação: Ideal para quem busca uma plataforma de vendas sempre atualizada, sem a necessidade de gerenciar infraestrutura.\n\nGestão Integral: A Vilela CodeLab assume toda a manutenção, monitoramento de performance e gestão técnica do site.\n\nTecnologia Inclusa: Hospedagem de elite, sistema de gerenciamento de conteúdo (CMS) e análise de dados já integrados na mensalidade." },
-            { title: "2. Modo Projeto (Propriedade Total)", desc: "Independência Técnica: Ideal para empresas que desejam realizar a própria gestão e ter posse absoluta de seus ativos digitais.\n\nSem Recorrência: O cliente adquire o código-fonte e a arquitetura desenvolvida, sem a obrigatoriedade de assinaturas mensais.\n\nInfraestrutura Proprietária: O sistema é implementado em infraestrutura própria do cliente, garantindo total soberania sobre os dados e o software." },
-            { title: "Diferenciais do Plano PRO", desc: "" },
+        modes: {
+            subscription: {
+                description: "Foco em Operação: Ideal para quem busca uma plataforma de vendas sempre atualizada, sem a necessidade de gerenciar infraestrutura.",
+                features: [
+                    { title: "Gestão Integral", desc: "A Vilela CodeLab assume toda a manutenção, monitoramento de performance e gestão técnica do site." },
+                    { title: "Tecnologia Inclusa", desc: "Hospedagem de elite, sistema de gerenciamento de conteúdo (CMS) e análise de dados já integrados na mensalidade." }
+                ]
+            },
+            project: {
+                description: "Independência Técnica: Ideal para empresas que desejam realizar a própria gestão e ter posse absoluta de seus ativos digitais.",
+                features: [
+                    { title: "Sem Recorrência", desc: "O cliente adquire o código-fonte e a arquitetura desenvolvida, sem a obrigatoriedade de assinaturas mensais." },
+                    { title: "Infraestrutura Proprietária", desc: "O sistema é implementado em infraestrutura própria do cliente, garantindo total soberania sobre os dados e o software." }
+                ]
+            }
+        },
+        commonFeatures: [
             { title: "Automação CRM Direta", desc: "Receba notificações de leads em tempo real em seus canais de comunicação oficiais, sem intermediários lentos." },
             { title: "CMS Gerenciável", desc: "Painel administrativo intuitivo para edição rápida de conteúdos e textos." },
             { title: "Design System Exclusivo", desc: "Identidade visual proprietária, construída do zero para refletir a autoridade da sua marca." },
@@ -72,10 +97,23 @@ const planDetails = {
     }
 };
 
-const PlanDetailsModal: React.FC<PlanDetailsModalProps> = ({ isOpen, onClose, planType }) => {
+const PlanDetailsModal: React.FC<PlanDetailsModalProps> = ({ isOpen, onClose, planType, initialTab = 'subscription' }) => {
     if (!isOpen || !planType) return null;
 
-    const content = planDetails[planType];
+    const [activeTab, setActiveTab] = React.useState<'project' | 'subscription'>(initialTab);
+
+    // Force 'any' cast to avoid build errors with union types
+    const content = planDetails[planType] as any;
+    const hasModes = 'modes' in content;
+
+    // Reset tab when modal opens/closes or plan changes
+    React.useEffect(() => {
+        setActiveTab(initialTab);
+    }, [isOpen, planType, initialTab]);
+
+    const currentModeContent = hasModes ? content.modes[activeTab] : null;
+    const featuresToRender = hasModes ? currentModeContent.features : content.features;
+    const subtitleToRender = hasModes ? currentModeContent.description : content.subtitle;
 
     return (
         <div
@@ -107,12 +145,44 @@ const PlanDetailsModal: React.FC<PlanDetailsModalProps> = ({ isOpen, onClose, pl
                         <div className="w-20 h-1 bg-primary/30 mt-2"></div>
                     </div>
 
-                    <p className="text-slate-300 font-medium text-lg leading-relaxed border-l-4 border-primary pl-4">
-                        {content.subtitle}
-                    </p>
+                    {hasModes ? (
+                        <>
+                            <div className="flex gap-4 mt-2 mb-6">
+                                <button
+                                    onClick={() => setActiveTab('project')}
+                                    className={`flex-1 px-4 py-3 rounded-xl text-xs font-bold uppercase tracking-wider border transition-all ${activeTab === 'project'
+                                        ? 'bg-primary/20 text-primary border-primary/50 shadow-[0_0_20px_rgba(56,189,248,0.2)]'
+                                        : 'bg-white/5 text-slate-400 border-white/10 hover:bg-white/10'
+                                        }`}
+                                >
+                                    Projeto
+                                </button>
+                                <button
+                                    onClick={() => setActiveTab('subscription')}
+                                    className={`flex-1 px-4 py-3 rounded-xl text-xs font-bold uppercase tracking-wider border transition-all ${activeTab === 'subscription'
+                                        ? 'bg-primary/20 text-primary border-primary/50 shadow-[0_0_20px_rgba(56,189,248,0.2)]'
+                                        : 'bg-white/5 text-slate-400 border-white/10 hover:bg-white/10'
+                                        }`}
+                                >
+                                    Assinatura
+                                </button>
+                            </div>
 
-                    <div className="flex flex-col gap-6 mt-4">
-                        {content.features.map((feature, idx) => (
+                            {/* Description */}
+                            <p className="text-slate-300 font-medium text-lg leading-relaxed border-l-4 border-primary pl-4 whitespace-pre-line mb-6">
+                                {currentModeContent.description}
+                            </p>
+                        </>
+                    ) : (
+                        subtitleToRender && (
+                            <p className="text-slate-300 font-medium text-lg leading-relaxed border-l-4 border-primary pl-4 mb-6">
+                                {subtitleToRender}
+                            </p>
+                        )
+                    )}
+
+                    <div className="flex flex-col gap-6">
+                        {featuresToRender.map((feature: any, idx: number) => (
                             <div key={idx} className="flex flex-col gap-1">
                                 {feature.desc ? (
                                     <>
@@ -133,14 +203,36 @@ const PlanDetailsModal: React.FC<PlanDetailsModalProps> = ({ isOpen, onClose, pl
                         ))}
                     </div>
 
-                    {content.timeline.length > 0 && (
+                    {hasModes && content.commonFeatures && (
+                        <div className="mt-8 pt-8 border-t border-white/10">
+                            <h3 className="text-white font-black uppercase tracking-widest text-xs mb-6 flex items-center gap-2">
+                                <span className="material-symbols-outlined text-primary text-lg">settings</span>
+                                Especificações Técnicas (Ambas as Versões)
+                            </h3>
+                            <div className="flex flex-col gap-6">
+                                {content.commonFeatures.map((feature: any, idx: number) => (
+                                    <div key={idx} className="flex flex-col gap-1">
+                                        <h3 className="text-white font-bold text-sm flex items-center gap-2">
+                                            <span className="material-symbols-outlined text-primary text-base">check_circle</span>
+                                            {feature.title}
+                                        </h3>
+                                        <p className="text-slate-400 text-xs pl-6 leading-relaxed whitespace-pre-line">
+                                            {feature.desc}
+                                        </p>
+                                    </div>
+                                ))}
+                            </div>
+                        </div>
+                    )}
+
+                    {content.timeline && content.timeline.length > 0 && (
                         <div className="mt-6 pt-6 border-t border-white/10">
                             <h3 className="text-white font-black uppercase tracking-widest text-xs mb-4 flex items-center gap-2">
                                 <span className="material-symbols-outlined text-primary text-lg">calendar_month</span>
                                 Cronograma Estimado
                             </h3>
                             <div className="grid grid-cols-1 gap-2">
-                                {content.timeline.map((item, idx) => (
+                                {content.timeline.map((item: any, idx: number) => (
                                     <div key={idx} className="flex items-center gap-3 text-slate-400 text-xs font-medium">
                                         <div className="w-1.5 h-1.5 rounded-full bg-primary/50"></div>
                                         {item}
