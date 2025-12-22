@@ -54,7 +54,7 @@ export default function App() {
         <Navbar onNavigate={handleNavigate} />
 
         <main className="flex flex-1 justify-center py-5 w-full">
-          <div className="layout-content-container flex flex-col max-w-[960px] flex-1 w-full">
+          <div className="layout-content-container flex flex-col flex-1 w-full relative">
             {currentScreen === 'home' ? (
               <>
                 <Hero
