@@ -26,20 +26,22 @@ const planDetails = {
     },
     pro: {
         title: "Landing Page PRO",
-        subtitle: "A união entre design exclusivo, automação inteligente e alta performance.",
+        subtitle: "Alta Performance e Automação Estratégica",
         features: [
-            { title: "Modo 1: Gestão Centralizada (Assinatura)", desc: "Foco total em vendas e tração. Nós assumimos toda a complexidade técnica: da hospedagem de elite às automações de leads e análise de performance em tempo real. Ideal para empresas que buscam agilidade e manutenção técnica inclusa." },
-            { title: "Modo 2: Ativo Independente (Projeto)", desc: "Para empresas que exigem a posse absoluta do seu patrimônio digital. Desenvolvemos seu sistema em infraestrutura proprietária, entregando o código-fonte finalizado e total autonomia técnica para sua equipe." },
-            { title: "Regra de Ouro (Modo Projeto)", desc: "Garantimos a propriedade total do código e dos dados ao cliente." },
-            { title: "Diferenciais Técnicos", desc: "" },
-            { title: "Ecossistema de Dados", desc: "Monitoramento avançado de métricas sem comprometer a velocidade de carregamento." },
-            { title: "Automação Direta", desc: "Receba notificações de leads instantaneamente em seus canais oficiais de comunicação." },
-            { title: "Infraestrutura Enterprise", desc: "Configuração de arquitetura em nuvem otimizada para segurança e escala (Infraestrutura de Nuvem Independente)." }
+            { title: "Escolha seu Modelo de Implementação", desc: "" },
+            { title: "1. Modo Assinatura (Gestão CodeLab)", desc: "Foco em Operação: Ideal para quem busca uma plataforma de vendas sempre atualizada, sem a necessidade de gerenciar infraestrutura.\n\nGestão Integral: A Vilela CodeLab assume toda a manutenção, monitoramento de performance e gestão técnica do site.\n\nTecnologia Inclusa: Hospedagem de elite, sistema de gerenciamento de conteúdo (CMS) e análise de dados já integrados na mensalidade." },
+            { title: "2. Modo Projeto (Propriedade Total)", desc: "Independência Técnica: Ideal para empresas que desejam realizar a própria gestão e ter posse absoluta de seus ativos digitais.\n\nSem Recorrência: O cliente adquire o código-fonte e a arquitetura desenvolvida, sem a obrigatoriedade de assinaturas mensais.\n\nInfraestrutura Proprietária: O sistema é implementado em infraestrutura própria do cliente, garantindo total soberania sobre os dados e o software." },
+            { title: "Diferenciais do Plano PRO", desc: "" },
+            { title: "Automação CRM Direta", desc: "Receba notificações de leads em tempo real em seus canais de comunicação oficiais, sem intermediários lentos." },
+            { title: "CMS Gerenciável", desc: "Painel administrativo intuitivo para edição rápida de conteúdos e textos." },
+            { title: "Design System Exclusivo", desc: "Identidade visual proprietária, construída do zero para refletir a autoridade da sua marca." },
+            { title: "Análise de Dados Avançada", desc: "Monitoramento preciso de métricas de conversão e comportamento do usuário." },
+            { title: "Nota Técnica", desc: "Os detalhes da arquitetura de nuvem e as ferramentas de automação são definidos de forma personalizada durante o briefing inicial." }
         ],
         timeline: [
-            "Fase 1: Estratégia (Dias 1-2)",
-            "Fase 2: Engenharia & Design System (Dias 3-6)",
-            "Fase 3: Entrega (Dia 7)"
+            "Fase 1 (Dias 1-2): Definição estratégica e briefing de automação.",
+            "Fase 2 (Dias 3-10): Engenharia de Performance, Design e Desenvolvimento do Sistema.",
+            "Fase 3 (Dias 11-15): Integração de dados, testes de estresse e entrega final."
         ]
     },
     premium: {
@@ -103,7 +105,7 @@ const PlanDetailsModal: React.FC<PlanDetailsModalProps> = ({ isOpen, onClose, pl
                                             <span className="material-symbols-outlined text-primary text-base">check_circle</span>
                                             {feature.title}
                                         </h3>
-                                        <p className="text-slate-400 text-xs pl-6 leading-relaxed">
+                                        <p className="text-slate-400 text-xs pl-6 leading-relaxed whitespace-pre-line">
                                             {feature.desc}
                                         </p>
                                     </>
