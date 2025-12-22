@@ -18,7 +18,7 @@ const planDetails = {
             { title: "Modelo 100% Assinatura", desc: "Você paga pelo uso da plataforma através de mensalidades ou trimestralidades competitivas." },
             { title: "Gestão e Manutenção Inclusas", desc: "A Vilela CodeLab cuida de toda a hospedagem e otimização contínua da página." },
             { title: "Foco em Resultados", desc: "Estrutura otimizada para carregar instantaneamente, garantindo que nenhum lead seja perdido por lentidão." },
-            { title: "Entrega em 7 Dias Úteis", desc: "Ciclo de desenvolvimento ultra-rápido para que sua oferta vá ao ar no menor tempo possível." },
+            { title: "Entrega em 72 Horas", desc: "Entrega em 72 horas após o briefing de informações coletadas." },
             { title: "Diferenciais Técnicos", desc: "" },
             { title: "Alta Conversão", desc: "Layout desenhado com foco total em um Call to Action (CTA) único e persuasivo." },
             { title: "Mobile-First", desc: "Prioridade absoluta na experiência em smartphones, onde ocorre a maior parte do tráfego atual." },
@@ -30,11 +30,7 @@ const planDetails = {
             { title: "Política de Cancelamento", desc: "Em caso de interrupção da assinatura, a exibição da página é suspensa." },
             { title: "Opção de Compra Absoluta", desc: "Caso seu negócio cresça e você deseje obter a posse total da página e do código, oferecemos uma Taxa de Migração para transferência definitiva do ativo." }
         ],
-        timeline: [
-            "Fase 1: Setup e Configuração (Dias 1-2)",
-            "Fase 2: Personalização e Conteúdo (Dias 3-5)",
-            "Fase 3: Revisão e Entrega (Dias 6-7)"
-        ]
+        timeline: []
     },
     pro: {
         title: "Landing Page PRO",
@@ -133,20 +129,22 @@ const PlanDetailsModal: React.FC<PlanDetailsModalProps> = ({ isOpen, onClose, pl
                         ))}
                     </div>
 
-                    <div className="mt-6 pt-6 border-t border-white/10">
-                        <h3 className="text-white font-black uppercase tracking-widest text-xs mb-4 flex items-center gap-2">
-                            <span className="material-symbols-outlined text-primary text-lg">calendar_month</span>
-                            Cronograma Estimado
-                        </h3>
-                        <div className="grid grid-cols-1 gap-2">
-                            {content.timeline.map((item, idx) => (
-                                <div key={idx} className="flex items-center gap-3 text-slate-400 text-xs font-medium">
-                                    <div className="w-1.5 h-1.5 rounded-full bg-primary/50"></div>
-                                    {item}
-                                </div>
-                            ))}
+                    {content.timeline.length > 0 && (
+                        <div className="mt-6 pt-6 border-t border-white/10">
+                            <h3 className="text-white font-black uppercase tracking-widest text-xs mb-4 flex items-center gap-2">
+                                <span className="material-symbols-outlined text-primary text-lg">calendar_month</span>
+                                Cronograma Estimado
+                            </h3>
+                            <div className="grid grid-cols-1 gap-2">
+                                {content.timeline.map((item, idx) => (
+                                    <div key={idx} className="flex items-center gap-3 text-slate-400 text-xs font-medium">
+                                        <div className="w-1.5 h-1.5 rounded-full bg-primary/50"></div>
+                                        {item}
+                                    </div>
+                                ))}
+                            </div>
                         </div>
-                    </div>
+                    )}
 
                 </div>
             </div>
