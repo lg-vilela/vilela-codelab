@@ -98,7 +98,7 @@ const ComparisonTable: React.FC = () => {
                     <table className="w-full min-w-[900px] border-collapse text-left">
                         <thead>
                             <tr className="border-b border-white/10 bg-white/5">
-                                <th className="p-6 pl-8 text-xs font-black text-primary uppercase tracking-[0.2em] w-1/4">Recursos</th>
+                                <th className="p-6 pl-8 text-xs font-black text-primary uppercase tracking-[0.2em] w-1/4 sticky left-0 z-20 bg-[#0F172A] border-r border-white/10 shadow-[4px_0_24px_rgba(0,0,0,0.2)]">Recursos</th>
                                 <th className="p-6 text-sm font-bold text-white w-1/4">
                                     <div className="flex flex-col gap-1">
                                         <span className="uppercase tracking-tight text-lg">Express</span>
@@ -126,7 +126,7 @@ const ComparisonTable: React.FC = () => {
                                     key={index}
                                     className="hover:bg-white/[0.02] transition-colors group"
                                 >
-                                    <td className="p-5 pl-8 text-xs font-bold text-slate-400 uppercase tracking-wider border-r border-white/5 group-hover:text-white transition-colors">
+                                    <td className="p-5 pl-8 text-xs font-bold text-slate-400 uppercase tracking-wider border-r border-white/5 group-hover:text-white transition-colors sticky left-0 z-20 bg-[#0F172A] group-hover:bg-[#161e31] shadow-[4px_0_24px_rgba(0,0,0,0.2)]">
                                         {row.feature}
                                     </td>
                                     <td className="p-5 text-sm border-r border-white/5">
