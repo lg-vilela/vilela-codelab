@@ -4,6 +4,7 @@ import Hero from './components/Hero';
 import Services from './components/Services';
 import Process from './components/Process';
 import Pricing from './components/Pricing';
+import FAQ from './components/FAQ';
 import CtaSection from './components/CtaSection';
 import Footer from './components/Footer';
 import QuoteForm from './components/QuoteForm';
@@ -63,6 +64,7 @@ export default function App() {
                 <Services />
                 <Process />
                 <Pricing onQuoteRequest={() => handleNavigate('quote')} />
+                <FAQ />
                 <CtaSection onNavigate={() => handleNavigate('quote')} />
               </>
             ) : (
