@@ -98,21 +98,21 @@ const ComparisonTable: React.FC = () => {
                     <table className="w-full min-w-[900px] border-collapse text-left">
                         <thead>
                             <tr className="border-b border-white/10 bg-white/5">
-                                <th className="p-6 pl-8 text-xs font-black text-primary uppercase tracking-[0.2em] w-1/4 sticky left-0 z-20 bg-[#0F172A] border-r border-white/10 shadow-[4px_0_24px_rgba(0,0,0,0.2)]">Recursos</th>
-                                <th className="p-6 text-sm font-bold text-white w-1/4">
+                                <th className="p-4 pl-8 text-xs font-black text-primary uppercase tracking-[0.2em] w-1/4 sticky left-0 z-20 bg-[#0F172A] border-r border-white/10 shadow-[4px_0_24px_rgba(0,0,0,0.2)]">Recursos</th>
+                                <th className="p-4 text-sm font-bold text-white w-1/4">
                                     <div className="flex flex-col gap-1">
                                         <span className="uppercase tracking-tight text-lg">Express</span>
                                         <span className="text-[10px] text-slate-400 font-mono bg-white/5 w-fit px-2 py-0.5 rounded border border-white/5">SaaS / Assinatura</span>
                                     </div>
                                 </th>
-                                <th className="p-6 text-sm font-bold text-white w-1/4 bg-primary/5 border-x border-primary/10 relative">
+                                <th className="p-4 text-sm font-bold text-white w-1/4 bg-primary/5 border-x border-primary/10 relative">
                                     <div className="absolute top-0 left-0 w-full h-1 bg-primary"></div>
                                     <div className="flex flex-col gap-1">
                                         <span className="uppercase tracking-tight text-lg text-primary">Pro</span>
                                         <span className="text-[10px] text-slate-400 font-mono bg-white/5 w-fit px-2 py-0.5 rounded border border-white/5">Projeto Custom</span>
                                     </div>
                                 </th>
-                                <th className="p-6 text-sm font-bold text-white w-1/4">
+                                <th className="p-4 text-sm font-bold text-white w-1/4">
                                     <div className="flex flex-col gap-1">
                                         <span className="uppercase tracking-tight text-lg">Enterprise</span>
                                         <span className="text-[10px] text-slate-400 font-mono bg-white/5 w-fit px-2 py-0.5 rounded border border-white/5">Sob Medida</span>
@@ -126,16 +126,16 @@ const ComparisonTable: React.FC = () => {
                                     key={index}
                                     className="hover:bg-white/[0.02] transition-colors group"
                                 >
-                                    <td className="p-5 pl-8 text-xs font-bold text-slate-400 uppercase tracking-wider border-r border-white/5 group-hover:text-white transition-colors sticky left-0 z-20 bg-[#0F172A] group-hover:bg-[#161e31] shadow-[4px_0_24px_rgba(0,0,0,0.2)]">
+                                    <td className="p-4 pl-8 text-xs font-bold text-slate-400 uppercase tracking-wider border-r border-white/5 group-hover:text-white transition-colors sticky left-0 z-20 bg-[#0F172A] group-hover:bg-[#161e31] shadow-[4px_0_24px_rgba(0,0,0,0.2)]">
                                         {row.feature}
                                     </td>
-                                    <td className="p-5 text-sm border-r border-white/5">
+                                    <td className="p-4 text-sm border-r border-white/5">
                                         {renderCell(row.express)}
                                     </td>
-                                    <td className="p-5 text-sm bg-primary/[0.02] border-r border-primary/10">
+                                    <td className="p-4 text-sm bg-primary/[0.02] border-r border-primary/10">
                                         {renderCell(row.pro)}
                                     </td>
-                                    <td className="p-5 text-sm">
+                                    <td className="p-4 text-sm">
                                         {renderCell(row.enterprise)}
                                     </td>
                                 </tr>

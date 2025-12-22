@@ -177,7 +177,7 @@ const Pricing: React.FC<PricingProps> = ({ onQuoteRequest = () => { } }) => {
           <div className="absolute inset-0 bg-background-dark/95 backdrop-blur-md"></div>
 
           {/* Modal Content - MAX WIDTH PARA CABER TUDO SEM SCROLL */}
-          <div className="relative w-full max-w-[98vw] max-h-[90vh] overflow-y-auto bg-[#0F172A] border border-white/10 rounded-3xl shadow-[0_0_100px_rgba(0,0,0,0.5)] cyber-card">
+          <div className="relative w-[98vw] max-h-[90vh] overflow-y-auto bg-[#0F172A] border border-white/10 rounded-3xl shadow-[0_0_100px_rgba(0,0,0,0.5)] cyber-card">
 
             {/* Sticky Header */}
             <div className="sticky top-0 z-50 flex justify-end p-4 bg-[#0F172A]/90 backdrop-blur-xl border-b border-white/5">
