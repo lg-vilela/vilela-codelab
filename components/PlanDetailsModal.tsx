@@ -10,17 +10,30 @@ interface PlanDetailsModalProps {
 
 const planDetails = {
     express: {
-        title: "Landing Page Express (SaaS)",
-        subtitle: "Ideal para validação rápida de ofertas, campanhas e infoprodutos.",
+        title: "Landing Page Express",
+        subtitle: "Validação Ágil e Conversão Imediata\n\nA solução definitiva para quem precisa colocar uma oferta no mercado com velocidade, sem abrir mão da engenharia de performance. Ideal para validação de campanhas, lançamentos de infoprodutos e páginas de vendas diretas.",
         features: [
-            { title: "Serviço Contínuo", desc: "Infraestrutura, manutenção e otimizações inclusas no modelo 100% assinatura." },
-            { title: "Características", desc: "Hospedado pela Vilela CodeLab, sem acesso ao root. Código-base é propriedade da Vilela CodeLab." },
-            { title: "Termos", desc: "Mensal ou trimestral. Cancelou -> página sai do ar. Migração absoluta mediante taxa. Gestão total inclusa." }
+            { title: "Como funciona o Modelo Express", desc: "" },
+            { title: "Conceito do Modelo", desc: "Este plano opera sob um modelo de Software como Serviço (SaaS), focado em reduzir seu custo inicial e eliminar qualquer preocupação com manutenção técnica." },
+            { title: "Modelo 100% Assinatura", desc: "Você paga pelo uso da plataforma através de mensalidades ou trimestralidades competitivas." },
+            { title: "Gestão e Manutenção Inclusas", desc: "A Vilela CodeLab cuida de toda a hospedagem e otimização contínua da página." },
+            { title: "Foco em Resultados", desc: "Estrutura otimizada para carregar instantaneamente, garantindo que nenhum lead seja perdido por lentidão." },
+            { title: "Entrega em 7 Dias Úteis", desc: "Ciclo de desenvolvimento ultra-rápido para que sua oferta vá ao ar no menor tempo possível." },
+            { title: "Diferenciais Técnicos", desc: "" },
+            { title: "Alta Conversão", desc: "Layout desenhado com foco total em um Call to Action (CTA) único e persuasivo." },
+            { title: "Mobile-First", desc: "Prioridade absoluta na experiência em smartphones, onde ocorre a maior parte do tráfego atual." },
+            { title: "SEO Básico", desc: "Configuração de meta tags essenciais para garantir uma presença saudável nos motores de busca." },
+            { title: "Termos de Propriedade e Migração", desc: "" },
+            { title: "Diretrizes", desc: "Para manter a viabilidade deste plano de entrada, seguimos diretrizes claras de propriedade intelectual." },
+            { title: "Hospedagem Centralizada", desc: "A página permanece hospedada em servidores geridos pela Vilela CodeLab." },
+            { title: "Propriedade do Código", desc: "O código-base do plano Express é de propriedade exclusiva da Vilela CodeLab." },
+            { title: "Política de Cancelamento", desc: "Em caso de interrupção da assinatura, a exibição da página é suspensa." },
+            { title: "Opção de Compra Absoluta", desc: "Caso seu negócio cresça e você deseje obter a posse total da página e do código, oferecemos uma Taxa de Migração para transferência definitiva do ativo." }
         ],
         timeline: [
-            "Setup e Configuração (Dia 1)",
-            "Personalização (Dias 2-3)",
-            "Entrega (Até 72h)"
+            "Fase 1: Setup e Configuração (Dias 1-2)",
+            "Fase 2: Personalização e Conteúdo (Dias 3-5)",
+            "Fase 3: Revisão e Entrega (Dias 6-7)"
         ]
     },
     pro: {
