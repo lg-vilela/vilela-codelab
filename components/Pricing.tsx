@@ -59,10 +59,10 @@ const Pricing: React.FC<PricingProps> = ({ onQuoteRequest = () => { } }) => {
           <div className="h-px bg-gradient-to-r from-primary/20 via-primary/5 to-transparent w-full my-4"></div>
           <div className="flex flex-col gap-5 flex-1">
             {[
-              { title: "Alta Conversão", desc: "Foco total em CTA único" },
-              { title: "Mobile-First", desc: "Prioridade em smartphones" },
-              { title: "SEO Básico", desc: "Configuração de meta tags" },
-              { title: "7 dias úteis", desc: "Entrega ultra-rápida" }
+              { title: "Gestão Web", desc: "Nós cuidamos de toda a infraestrutura e manutenções." },
+              { title: "Mobile-First", desc: "Prioridade em smartphones." },
+              { title: "Alta Conversão", desc: "Foco total em conversão de clientes." },
+              { title: "Site entregue em 72 horas", desc: "Entrega ultra-rápida." }
             ].map((item, i) => (
               <div key={i} className="flex gap-4 items-start">
                 <span className="material-symbols-outlined text-primary text-xl">check_circle</span>
@@ -92,10 +92,10 @@ const Pricing: React.FC<PricingProps> = ({ onQuoteRequest = () => { } }) => {
           <div className="h-px bg-primary/20 w-full my-4"></div>
           <div className="flex flex-col gap-5 flex-1">
             {[
-              { title: "CMS Gerenciável", desc: "Painel Admin intuitivo" },
-              { title: "Automação CRM", desc: "Integração HubSpot/RD Station" },
+              { title: "Automação de Leads", desc: "Sistema inteligente que entrega notificações em tempo real." },
+              { title: "Análise de Dados", desc: "Monitoramento de métricas e insights." },
               { title: "Design System", desc: "Identidade proprietária" },
-              { title: "Análise de Dados", desc: "Supabase" }
+              { title: "CMS Gerenciável", desc: "Painel Admin intuitivo." }
             ].map((item, i) => (
               <div key={i} className="flex gap-4 items-start">
                 <span className="material-symbols-outlined text-primary text-xl">workspace_premium</span>
@@ -128,10 +128,10 @@ const Pricing: React.FC<PricingProps> = ({ onQuoteRequest = () => { } }) => {
           <div className="h-px bg-gradient-to-r from-primary/20 via-primary/5 to-transparent w-full my-4"></div>
           <div className="flex flex-col gap-5 flex-1">
             {[
-              { title: "Squad Dedicada", desc: "Desenvolvimento e Design Exclusivo" },
-              { title: "SLA Prioritário", desc: "Atendimento de alta resposta" },
-              { title: "Cloud Complexa", desc: "Infraestrutura escalável" },
-              { title: "Manutenção 24/7", desc: "Otimização técnica contínua" }
+              { title: "Squad Dedicada", desc: "Desenvolvimento e Design Exclusivo." },
+              { title: "Infraestrutura Completa", desc: "Configuração enterprise nas contas do cliente." },
+              { title: "SLA Prioritário", desc: "Atendimento técnico de alta resposta." },
+              { title: "Parceria Técnica", desc: "Atuamos como seu braço direito na engenharia web." }
             ].map((item, i) => (
               <div key={i} className="flex gap-4 items-start">
                 <span className="material-symbols-outlined text-primary text-xl">hub</span>
