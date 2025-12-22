@@ -9,20 +9,43 @@ const Pricing: React.FC<PricingProps> = ({ onQuoteRequest = () => { } }) => {
   const [selectedPlan, setSelectedPlan] = useState<'express' | 'pro' | 'premium' | null>(null);
   const whatsappLink = "https://wa.me/5511953840339";
 
-  const ActionButtons = ({ whatsappUrl, isFeatured = false, onQuoteRequest, onDetailsClick }: { whatsappUrl: string, isFeatured?: boolean, onQuoteRequest: () => void, onDetailsClick: () => void }) => (
-    <div className="grid grid-cols-1 gap-3 mt-6">
-      <button
-        onClick={onDetailsClick}
-        className={`flex items-center justify-center rounded-lg py-3 px-2 text-[11px] font-bold transition-all cursor-pointer border h-auto whitespace-normal text-center ${isFeatured
-          ? 'bg-white/10 border-white/20 text-white hover:bg-white/20'
-          : 'bg-white/5 border-white/5 text-white hover:bg-white/10'
-          }`}
-      >
-        <span>Mais informações</span>
-      </button>
+  const ActionButtons = ({ whatsappUrl, isFeatured = false, isSplit = false, onQuoteRequest, onDetailsClick }: { whatsappUrl: string, isFeatured?: boolean, isSplit?: boolean, onQuoteRequest: () => void, onDetailsClick?: (mode?: 'project' | 'subscription') => void }) => (
+    <div className="flex flex-col gap-3 mt-6">
+      {isSplit ? (
+        <div className="grid grid-cols-2 gap-3">
+          <button
+            onClick={() => onDetailsClick && onDetailsClick('project')}
+            className={`flex items-center justify-center rounded-lg py-3 px-2 text-[11px] font-bold transition-all cursor-pointer border h-auto whitespace-normal text-center uppercase tracking-wider ${isFeatured
+              ? 'bg-white/10 border-white/20 text-white hover:bg-white/20'
+              : 'bg-white/5 border-white/5 text-white hover:bg-white/10'
+              }`}
+          >
+            Projeto
+          </button>
+          <button
+            onClick={() => onDetailsClick && onDetailsClick('subscription')}
+            className={`flex items-center justify-center rounded-lg py-3 px-2 text-[11px] font-bold transition-all cursor-pointer border h-auto whitespace-normal text-center uppercase tracking-wider ${isFeatured
+              ? 'bg-white/10 border-white/20 text-white hover:bg-white/20'
+              : 'bg-white/5 border-white/5 text-white hover:bg-white/10'
+              }`}
+          >
+            Assinatura
+          </button>
+        </div>
+      ) : (
+        <button
+          onClick={() => onDetailsClick && onDetailsClick()}
+          className={`flex items-center justify-center rounded-lg py-3 px-2 text-[11px] font-bold transition-all cursor-pointer border h-auto whitespace-normal text-center ${isFeatured
+            ? 'bg-white/10 border-white/20 text-white hover:bg-white/20'
+            : 'bg-white/5 border-white/5 text-white hover:bg-white/10'
+            }`}
+        >
+          <span>Mais informações</span>
+        </button>
+      )}
       <button
         onClick={onQuoteRequest}
-        className="flex items-center justify-center rounded-lg py-3 px-2 text-[11px] font-bold transition-all cursor-pointer shadow-md h-auto whitespace-normal text-center bg-primary hover:bg-primary-dark text-white scale-100 hover:scale-[1.02] active:scale-95"
+        className="flex items-center justify-center rounded-lg py-3 px-2 text-[11px] font-bold transition-all cursor-pointer shadow-md h-auto whitespace-normal text-center bg-primary hover:bg-primary-dark text-white scale-100 hover:scale-[1.02] active:scale-95 w-full"
       >
         <span>Falar com Consultor</span>
       </button>
@@ -75,8 +98,9 @@ const Pricing: React.FC<PricingProps> = ({ onQuoteRequest = () => { } }) => {
           </div>
           <ActionButtons
             whatsappUrl={whatsappLink}
+            isSplit={true}
             onQuoteRequest={onQuoteRequest}
-            onDetailsClick={() => setSelectedPlan('express')}
+            onDetailsClick={() => { /* Placeholder for future pop-up logic */ }}
           />
         </div>
 
@@ -109,8 +133,9 @@ const Pricing: React.FC<PricingProps> = ({ onQuoteRequest = () => { } }) => {
           <ActionButtons
             whatsappUrl={whatsappLink}
             isFeatured={true}
+            isSplit={true}
             onQuoteRequest={onQuoteRequest}
-            onDetailsClick={() => setSelectedPlan('pro')}
+            onDetailsClick={() => { /* Placeholder for future pop-up logic */ }}
           />
         </div>
 
