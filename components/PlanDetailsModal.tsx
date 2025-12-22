@@ -50,31 +50,38 @@ const planDetails = {
         title: "Landing Page PRO",
         modes: {
             subscription: {
-                description: "Foco em Operação: Ideal para quem busca uma plataforma de vendas sempre atualizada, sem a necessidade de gerenciar infraestrutura.",
+                description: "Ideal para empresas em crescimento que buscam inteligência de dados com gestão integral.\nEste modelo é uma plataforma completa de vendas, onde a Vilela CodeLab gerencia toda a tecnologia para que você foque apenas na estratégia do seu negócio.",
                 features: [
-                    { title: "Gestão Integral", desc: "A Vilela CodeLab assume toda a manutenção, monitoramento de performance e gestão técnica do site." },
-                    { title: "Tecnologia Inclusa", desc: "Hospedagem de elite, sistema de gerenciamento de conteúdo (CMS) e análise de dados já integrados na mensalidade." }
+                    { title: "Objetivo Estratégico", desc: "Implementação de análise de dados avançada e automação de processos de vendas." },
+                    { title: "Gestão de Infraestrutura", desc: "Toda a operação técnica é gerida e hospedada em ambiente profissional pela Vilela CodeLab." },
+                    { title: "Modelagem de Dados", desc: "Inclui integração ativa com banco de dados para armazenamento seguro de leads." },
+                    { title: "Custos de Terceiros", desc: "Licenciamentos de infraestrutura e ferramentas de automação já estão inclusos na mensalidade." },
+                    { title: "Propriedade (IP)", desc: "O código e a inteligência do projeto pertencem à Vilela CodeLab enquanto houver o vínculo da consultoria." },
+                    { title: "Suporte e Evolução", desc: "Manutenção técnica e suporte inclusos para garantir que sua operação nunca pare." }
                 ]
             },
             project: {
-                description: "Independência Técnica: Ideal para empresas que desejam realizar a própria gestão e ter posse absoluta de seus ativos digitais.",
+                description: "Ideal para quem deseja adquirir um ativo digital robusto com total independência.\nNeste modelo, desenvolvemos sua infraestrutura de inteligência diretamente em suas contas proprietárias, garantindo a posse absoluta do seu software.",
                 features: [
-                    { title: "Sem Recorrência", desc: "O cliente adquire o código-fonte e a arquitetura desenvolvida, sem a obrigatoriedade de assinaturas mensais." },
-                    { title: "Infraestrutura Proprietária", desc: "O sistema é implementado em infraestrutura própria do cliente, garantindo total soberania sobre os dados e o software." }
+                    { title: "Objetivo Estratégico", desc: "Aquisição de um ativo digital independente e escalável para a sua empresa." },
+                    { title: "Infraestrutura Independente", desc: "Configuração profissional realizada diretamente nas contas do cliente (Vercel, Supabase e Umami)." },
+                    { title: "Modelagem de Dados", desc: "Arquitetura de banco de dados exclusiva para gestão autônoma de leads." },
+                    { title: "Custos de Terceiros", desc: "O cliente assume diretamente as mensalidades dos provedores de infraestrutura." },
+                    { title: "Propriedade (IP)", desc: "O código-fonte e todos os ativos são 100% de propriedade do cliente após a entrega." },
+                    { title: "Sem Recorrência", desc: "Sem taxas mensais obrigatórias após a finalização da entrega técnica." }
                 ]
             }
         },
         commonFeatures: [
-            { title: "Automação CRM Direta", desc: "Receba notificações de leads em tempo real em seus canais de comunicação oficiais, sem intermediários lentos." },
-            { title: "CMS Gerenciável", desc: "Painel administrativo intuitivo para edição rápida de conteúdos e textos." },
-            { title: "Design System Exclusivo", desc: "Identidade visual proprietária, construída do zero para refletir a autoridade da sua marca." },
-            { title: "Análise de Dados Avançada", desc: "Monitoramento preciso de métricas de conversão e comportamento do usuário." },
-            { title: "Nota Técnica", desc: "Os detalhes da arquitetura de nuvem e as ferramentas de automação são definidos de forma personalizada durante o briefing inicial." }
+            { title: "CMS Gerenciável", desc: "Painel administrativo intuitivo para você editar conteúdos de forma autônoma." },
+            { title: "Automação de Dados", desc: "Notificações em tempo real e integração inteligente de leads." },
+            { title: "Design System", desc: "Identidade visual proprietária, construída do zero para a sua marca." },
+            { title: "Análise de Dados", desc: "Monitoramento avançado de comportamento e métricas de conversão." }
         ],
         timeline: [
-            "Fase 1 (Dia 1): Definição estratégica e briefing de automação.",
-            "Fase 2 (Dias 2-5): Engenharia de Performance, Design e Desenvolvimento do Sistema.",
-            "Fase 3 (Dias 6-7): Integração de dados, testes de estresse e entrega final."
+            "Fase 1: Estratégia (Dias 1-2): Alinhamento de objetivos e definição de modelagem de dados.",
+            "Fase 2: Design & Dev (Dias 3-10): Engenharia de software e construção da interface exclusiva.",
+            "Fase 3: Entrega (Dias 11-15): Testes de integração, automações e entrega técnica final."
         ]
     },
     premium: {

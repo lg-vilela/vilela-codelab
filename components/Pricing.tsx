@@ -7,6 +7,7 @@ interface PricingProps {
 
 const Pricing: React.FC<PricingProps> = ({ onQuoteRequest = () => { } }) => {
   const [selectedPlan, setSelectedPlan] = useState<'express' | 'pro' | 'premium' | null>(null);
+  const [initialTab, setInitialTab] = useState<'project' | 'subscription'>('subscription');
   const whatsappLink = "https://wa.me/5511953840339";
 
   const ActionButtons = ({ whatsappUrl, isFeatured = false, isSplit = false, onQuoteRequest, onDetailsClick }: { whatsappUrl: string, isFeatured?: boolean, isSplit?: boolean, onQuoteRequest: () => void, onDetailsClick?: (mode?: 'project' | 'subscription') => void }) => (
@@ -35,7 +36,7 @@ const Pricing: React.FC<PricingProps> = ({ onQuoteRequest = () => { } }) => {
       ) : (
         <button
           onClick={() => onDetailsClick && onDetailsClick()}
-          className={`flex items-center justify-center rounded-lg py-3 px-2 text-[11px] font-bold transition-all cursor-pointer border h-auto whitespace-normal text-center ${isFeatured
+          className={`flex items-center justify-center rounded-lg py-3 px-2 text-[11px] font-bold transition-all cursor-pointer border h-auto whitespace-normal text-center uppercase tracking-wider ${isFeatured
             ? 'bg-white/10 border-white/20 text-white hover:bg-white/20'
             : 'bg-white/5 border-white/5 text-white hover:bg-white/10'
             }`}
@@ -45,7 +46,7 @@ const Pricing: React.FC<PricingProps> = ({ onQuoteRequest = () => { } }) => {
       )}
       <button
         onClick={onQuoteRequest}
-        className="flex items-center justify-center rounded-lg py-3 px-2 text-[11px] font-bold transition-all cursor-pointer shadow-md h-auto whitespace-normal text-center bg-primary hover:bg-primary-dark text-white scale-100 hover:scale-[1.02] active:scale-95 w-full"
+        className="flex items-center justify-center rounded-lg py-3 px-2 text-[11px] font-bold transition-all cursor-pointer shadow-md h-auto whitespace-normal text-center bg-primary hover:bg-primary-dark text-white scale-100 hover:scale-[1.02] active:scale-95 w-full uppercase tracking-wider"
       >
         <span>Falar com Consultor</span>
       </button>
@@ -100,7 +101,10 @@ const Pricing: React.FC<PricingProps> = ({ onQuoteRequest = () => { } }) => {
             whatsappUrl={whatsappLink}
             isSplit={true}
             onQuoteRequest={onQuoteRequest}
-            onDetailsClick={() => { /* Placeholder for future pop-up logic */ }}
+            onDetailsClick={(mode) => {
+              setInitialTab(mode || 'subscription');
+              setSelectedPlan('express');
+            }}
           />
         </div>
 
@@ -135,7 +139,10 @@ const Pricing: React.FC<PricingProps> = ({ onQuoteRequest = () => { } }) => {
             isFeatured={true}
             isSplit={true}
             onQuoteRequest={onQuoteRequest}
-            onDetailsClick={() => { /* Placeholder for future pop-up logic */ }}
+            onDetailsClick={(mode) => {
+              setInitialTab(mode || 'subscription');
+              setSelectedPlan('pro');
+            }}
           />
         </div>
 
@@ -179,6 +186,7 @@ const Pricing: React.FC<PricingProps> = ({ onQuoteRequest = () => { } }) => {
         isOpen={!!selectedPlan}
         onClose={() => setSelectedPlan(null)}
         planType={selectedPlan}
+        initialTab={initialTab}
       />
 
     </div>
