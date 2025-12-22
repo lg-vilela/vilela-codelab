@@ -60,14 +60,40 @@ const ComparisonTable: React.FC = () => {
             {/* Background Decorations */}
             <div className="absolute top-0 left-1/2 -translate-x-1/2 w-1/2 h-full bg-primary/5 blur-[120px] -z-10 pointer-events-none"></div>
 
-            <div className="flex flex-col gap-2 mb-16 text-center">
+            <div className="flex flex-col gap-2 mb-10 text-center">
                 <div className="text-primary font-black tracking-[0.4em] uppercase text-[9px] mb-1">Technical Specs</div>
-                <h3 className="text-white text-4xl md:text-5xl font-black tracking-tighter uppercase text-glow-primary leading-none">
+                <h3 className="text-white text-3xl md:text-5xl font-black tracking-tighter uppercase text-glow-primary leading-none">
                     Comparativo <span className="text-primary italic">Detalhado</span>
                 </h3>
             </div>
 
-            <div className="overflow-hidden rounded-3xl border border-white/10 shadow-2xl bg-[#0F172A]/40 backdrop-blur-xl">
+            {/* Mobile View (Cards) */}
+            <div className="flex flex-col gap-4 md:hidden">
+                {tableData.map((row, index) => (
+                    <div key={index} className="bg-[#0F172A] border border-white/10 rounded-xl p-6 flex flex-col gap-4">
+                        <div className="text-primary font-black uppercase tracking-[0.2em] text-xs border-b border-primary/20 pb-2">
+                            {row.feature}
+                        </div>
+                        <div className="grid grid-cols-1 gap-4">
+                            <div className="flex items-center justify-between">
+                                <span className="text-white font-bold text-xs uppercase">Express</span>
+                                {renderCell(row.express)}
+                            </div>
+                            <div className="flex items-center justify-between bg-primary/5 p-2 rounded-lg -mx-2">
+                                <span className="text-primary font-bold text-xs uppercase">Pro</span>
+                                {renderCell(row.pro)}
+                            </div>
+                            <div className="flex items-center justify-between">
+                                <span className="text-white font-bold text-xs uppercase">Enterprise</span>
+                                {renderCell(row.enterprise)}
+                            </div>
+                        </div>
+                    </div>
+                ))}
+            </div>
+
+            {/* Desktop View (Table) */}
+            <div className="hidden md:block overflow-hidden rounded-3xl border border-white/10 shadow-2xl bg-[#0F172A]/40 backdrop-blur-xl">
                 <div className="overflow-x-auto pb-4 scrollbar-thin scrollbar-track-transparent scrollbar-thumb-primary/20">
                     <table className="w-full min-w-[900px] border-collapse text-left">
                         <thead>
