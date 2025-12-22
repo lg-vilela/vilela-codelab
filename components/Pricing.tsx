@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import PlanDetailsModal from './PlanDetailsModal';
+import ComparisonTable from './ComparisonTable';
 
 interface PricingProps {
   onQuoteRequest?: () => void;
@@ -150,6 +151,8 @@ const Pricing: React.FC<PricingProps> = ({ onQuoteRequest = () => { } }) => {
           />
         </div>
       </div>
+
+      <ComparisonTable />
 
       <PlanDetailsModal
         isOpen={!!selectedPlan}
