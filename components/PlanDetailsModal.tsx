@@ -26,16 +26,19 @@ const planDetails = {
     },
     pro: {
         title: "Landing Page PRO",
-        subtitle: "Este plano funciona em dois modos distintos:",
+        subtitle: "A união entre design exclusivo, automação inteligente e alta performance.",
         features: [
-            { title: "Modo 1: Assinatura", desc: "Plataforma completa de vendas com foco em automação e dados. Hospedagem, CMS e Analytics inclusos. Gestão total pela Vilela CodeLab." },
-            { title: "Modo 2: Projeto", desc: "Código e infraestrutura próprios. Ideal para quem deseja realizar a gestão. Valor e prazo maiores. Sem recorrência obrigatória." },
-            { title: "Infraestrutura (Modo Projeto)", desc: "Conta do cliente (Supabase, Vercel e Umami)." }
+            { title: "Modo 1: Gestão Centralizada (Assinatura)", desc: "Foco total em vendas e tração. Nós assumimos toda a complexidade técnica: da hospedagem de elite às automações de leads e análise de performance em tempo real. Ideal para empresas que buscam agilidade e manutenção técnica inclusa." },
+            { title: "Modo 2: Ativo Independente (Projeto)", desc: "Para empresas que exigem a posse absoluta do seu patrimônio digital. Desenvolvemos seu sistema em infraestrutura proprietária, entregando o código-fonte finalizado e total autonomia técnica para sua equipe." },
+            { title: "Regra de Ouro (Modo Projeto)", desc: "Garantimos a propriedade total do código e dos dados ao cliente." },
+            { title: "Ecossistema de Dados", desc: "Monitoramento avançado de métricas sem comprometer a velocidade de carregamento." },
+            { title: "Automação Direta", desc: "Receba notificações de leads instantaneamente em seus canais oficiais de comunicação." },
+            { title: "Infraestrutura Enterprise", desc: "Configuração de arquitetura em nuvem otimizada para segurança e escala (Infraestrutura de Nuvem Independente)." }
         ],
         timeline: [
             "Fase 1: Estratégia (Dias 1-2)",
-            "Fase 2: Design & Dev (Dias 3-10)",
-            "Fase 3: Entrega (Dias 11-15)"
+            "Fase 2: Engenharia & Design System (Dias 3-6)",
+            "Fase 3: Entrega (Dia 7)"
         ]
     },
     premium: {
