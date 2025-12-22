@@ -56,7 +56,7 @@ const ComparisonTable: React.FC = () => {
     };
 
     return (
-        <div className="w-full mt-32 relative">
+        <div className="w-full mt-12 mb-8 relative">
             {/* Background Decorations */}
             <div className="absolute top-0 left-1/2 -translate-x-1/2 w-1/2 h-full bg-primary/5 blur-[120px] -z-10 pointer-events-none"></div>
 

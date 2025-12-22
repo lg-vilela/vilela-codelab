@@ -1,4 +1,5 @@
 import React from 'react';
+import ComparisonTable from './ComparisonTable';
 
 type PlanType = 'express' | 'pro' | 'premium';
 
@@ -116,6 +117,10 @@ const PlanDetailsModal: React.FC<PlanDetailsModalProps> = ({ isOpen, onClose, pl
                                 </div>
                             ))}
                         </div>
+                    </div>
+
+                    <div className="mt-8 border-t border-white/10 pt-8">
+                        <ComparisonTable />
                     </div>
                 </div>
             </div>
