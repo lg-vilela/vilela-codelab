@@ -54,7 +54,7 @@ const planDetails = {
     },
     premium: {
         title: "Sites Enterprise",
-        subtitle: "Engenharia de Software e Ecossistemas Digitais de Alta Complexidade\n\nO Plano Enterprise é a solução definitiva para corporações que não buscam apenas uma presença digital, mas um ativo tecnológico escalável, seguro e de alta disponibilidade. Aqui, desenvolvemos Sites Completos e sistemas personalizados, desenhados para suportar operações de alto volume e grande responsabilidade técnica.",
+        subtitle: "Engenharia de software e ecossistemas digitais de alta complexidade.\n\nO Plano Enterprise é a solução definitiva para corporações que não buscam apenas uma presença digital, mas um ativo tecnológico escalável, seguro e de alta disponibilidade. Aqui, desenvolvemos Sites Completos e sistemas personalizados, desenhados para suportar operações de alto volume e grande responsabilidade técnica.",
         features: [
             { title: "A Parceria Técnica Estratégica", desc: "" },
             { title: "Squad Dedicada", desc: "Um time de especialistas exclusivo para o desenvolvimento, design e manutenção do seu site." },
