@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import PlanDetailsModal from './PlanDetailsModal';
+import ComparisonTable from './ComparisonTable';
 
 interface PricingProps {
   onQuoteRequest?: () => void;
@@ -7,6 +8,7 @@ interface PricingProps {
 
 const Pricing: React.FC<PricingProps> = ({ onQuoteRequest = () => { } }) => {
   const [selectedPlan, setSelectedPlan] = useState<'express' | 'pro' | 'premium' | null>(null);
+  const [showComparison, setShowComparison] = useState(false);
   const whatsappLink = "https://wa.me/5511953840339";
 
   const ActionButtons = ({ whatsappUrl, isFeatured = false, onQuoteRequest, onDetailsClick }: { whatsappUrl: string, isFeatured?: boolean, onQuoteRequest: () => void, onDetailsClick: () => void }) => (
@@ -42,6 +44,17 @@ const Pricing: React.FC<PricingProps> = ({ onQuoteRequest = () => { } }) => {
         <p className="text-slate-400 text-lg md:text-xl max-w-[720px] font-medium leading-relaxed mx-auto mt-4">
           Estruturas focadas em resultados, desde a validação rápida até operações de alta escala.
         </p>
+
+        {/* Botão de Comparativo */}
+        <div className="mt-8 flex justify-center">
+          <button
+            onClick={() => setShowComparison(true)}
+            className="flex items-center gap-2 px-6 py-3 rounded-full bg-white/5 border border-white/10 hover:bg-white/10 hover:border-primary/30 transition-all group"
+          >
+            <span className="material-symbols-outlined text-primary group-hover:scale-110 transition-transform">table_chart</span>
+            <span className="text-xs font-black uppercase tracking-widest text-white">Ver Comparativo Completo</span>
+          </button>
+        </div>
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch">
@@ -151,13 +164,35 @@ const Pricing: React.FC<PricingProps> = ({ onQuoteRequest = () => { } }) => {
         </div>
       </div>
 
-
-
       <PlanDetailsModal
         isOpen={!!selectedPlan}
         onClose={() => setSelectedPlan(null)}
         planType={selectedPlan}
       />
+
+      {/* Comparison Modal (Standalone) */}
+      {showComparison && (
+        <div
+          className="fixed inset-0 z-[100] flex items-center justify-center p-4 md:p-8 animate-fade-in-down"
+          onClick={(e) => e.target === e.currentTarget && setShowComparison(false)}
+        >
+          {/* Backdrop */}
+          <div className="absolute inset-0 bg-background-dark/95 backdrop-blur-md"></div>
+
+          {/* Modal Content - MAX WIDTH PARA CABER TUDO SEM SCROLL */}
+          <div className="relative w-full max-w-[95vw] xl:max-w-7xl max-h-[90vh] overflow-y-auto bg-[#0F172A] border border-white/10 rounded-3xl p-6 md:p-12 shadow-[0_0_100px_rgba(0,0,0,0.5)] cyber-card">
+            {/* Close Button */}
+            <button
+              onClick={() => setShowComparison(false)}
+              className="absolute top-6 right-6 text-white/60 hover:text-white transition-colors flex items-center gap-2 text-[10px] font-black uppercase tracking-widest z-10"
+            >
+              Fechar <span className="material-symbols-outlined text-sm">close</span>
+            </button>
+
+            <ComparisonTable />
+          </div>
+        </div>
+      )}
     </div>
   );
 };
