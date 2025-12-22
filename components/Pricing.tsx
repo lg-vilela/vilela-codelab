@@ -47,11 +47,11 @@ const Pricing: React.FC<PricingProps> = ({ onQuoteRequest = () => { } }) => {
 
         {/* Plano: Express */}
         <div className="group relative flex flex-col gap-4 rounded-2xl border border-white/5 bg-[#0F172A] p-8 hover:-translate-y-2 transition-all duration-500 shadow-lg glass-effect">
-          <div className="flex flex-col gap-1">
-            <div className="flex items-center justify-between">
-              <h3 className="text-white text-2xl font-bold group-hover:text-primary transition-colors">Landing Page Express</h3>
+          <div className="flex flex-col gap-3">
+            <div className="flex items-start justify-between">
               <span className="text-primary text-[9px] font-black tracking-[0.2em] uppercase rounded-lg bg-primary/10 border border-primary/20 px-3 py-1">Validação</span>
             </div>
+            <h3 className="text-white text-3xl font-black group-hover:text-primary transition-colors leading-none">Landing Page Express</h3>
             <p className="text-slate-400 text-sm font-medium mt-4 leading-relaxed">
               Ideal para validação rápida de infoprodutos e captação de leads focada.
             </p>
