@@ -10,52 +10,45 @@ interface PlanDetailsModalProps {
 
 const planDetails = {
     express: {
-        title: "Landing Page Express",
-        subtitle: "Presença digital rápida e eficiente com foco total em conversão.",
+        title: "Landing Page Express (SaaS)",
+        subtitle: "Ideal para validação rápida de ofertas, campanhas e infoprodutos.",
         features: [
-            { title: "Foco Total em Vendas", desc: "Página única desenhada para levar o cliente a uma única ação: entrar em contato ou comprar." },
-            { title: "Perfeito no Celular", desc: "Construído primeiro para smartphones, com carregamento instantâneo e navegação fluida." },
-            { title: "Encontrado no Google", desc: "Configuração técnica de SEO para garantir visibilidade orgânica inicial." },
-            { title: "Entrega Ultra-Rápida", desc: "Ganhe presença profissional na internet em apenas uma semana." },
-            { title: "Para quem é", desc: "Ideal para validação rápida de ofertas, quem busca alta qualidade sem complexidade estrutural imediata ou precisa de velocidade para iniciar anúncios." }
+            { title: "Serviço Contínuo", desc: "Infraestrutura, manutenção e otimizações inclusas no modelo 100% assinatura." },
+            { title: "Características", desc: "Hospedado pela Vilela CodeLab, sem acesso ao root. Código-base é propriedade da Vilela CodeLab." },
+            { title: "Termos", desc: "Mensal ou trimestral. Cancelou -> página sai do ar. Migração absoluta mediante taxa. Gestão total inclusa." }
         ],
         timeline: [
-            "Fase 1: Coleta e Estratégia (Dia 1)",
-            "Fase 2: Prototipagem & Design (Dias 2-3)",
-            "Fase 3: Desenvolvimento & Deploy (Dias 4-7)"
+            "Setup e Configuração (Dia 1)",
+            "Personalização (Dias 2-3)",
+            "Entrega (Até 72h)"
         ]
     },
     pro: {
-        title: "Landing Page Pro",
-        subtitle: "Escala e automação para operações em crescimento.",
+        title: "Landing Page PRO",
+        subtitle: "Este plano funciona em dois modos distintos:",
         features: [
-            { title: "Automação CRM", desc: "Conexão direta do site com o sistema de vendas (CRM) para organização imediata de leads." },
-            { title: "Design System Exclusivo", desc: "Identidade visual única e diferenciada para destacar a marca da concorrência." },
-            { title: "Análise Avançada de Dados", desc: "Instalação de ferramentas de tracking para entender a origem dos clientes e comportamento no site." },
-            { title: "Diferencial", desc: "Arquitetura preparada para volume massivo de acessos simultâneos e integração profunda com ferramentas de marketing." }
+            { title: "Modo 1: Assinatura", desc: "Plataforma completa de vendas com foco em automação e dados. Hospedagem, CMS e Analytics inclusos. Gestão total pela Vilela CodeLab." },
+            { title: "Modo 2: Projeto", desc: "Código e infraestrutura próprios. Ideal para quem deseja realizar a gestão. Valor e prazo maiores. Sem recorrência obrigatória." },
+            { title: "Infraestrutura (Modo Projeto)", desc: "Conta do cliente (Supabase, Vercel e Umami)." }
         ],
         timeline: [
-            "Fase 1: Estratégia e Dados (Dias 1-2)",
-            "Fase 2: UI/UX & Prototipagem (Dias 3-6)",
-            "Fase 3: Build e Integrações (Dias 7-12)",
-            "Fase 4: QA e Performance (Dias 13-15)"
+            "Fase 1: Estratégia (Dias 1-2)",
+            "Fase 2: Design & Dev (Dias 3-10)",
+            "Fase 3: Entrega (Dias 11-15)"
         ]
     },
     premium: {
-        title: "Landing Page Premium",
-        subtitle: "Solução robusta de nível empresarial com suporte dedicado.",
+        title: "Premium - Sob Medida",
+        subtitle: "Soluções para operações que exigem arquitetura escalável e time dedicado.",
         features: [
-            { title: "Squad Dedicada (Devs + Design)", desc: "Profissionais de design e engenharia focados exclusivamente no projeto para garantir perfeição nos detalhes." },
-            { title: "SLA de Atendimento Prioritário", desc: "Canal direto e prioritário com respostas imediatas para ajustes e necessidades." },
-            { title: "Infraestrutura Cloud Complexa", desc: "Utilização de servidores globais avançados preparados para suportar picos massivos de tráfego." },
-            { title: "Manutenção e Otimização Contínua", desc: "Proteção contra ataques e melhorias técnicas constantes para manter o site atualizado." },
-            { title: "Tecnologia de Ponta", desc: "Desenvolvimento com as mesmas tecnologias utilizadas por gigantes como Netflix e Airbnb." }
+            { title: "Projeto Enterprise", desc: "Alto ticket, alta responsabilidade e infraestrutura complexa." },
+            { title: "Infraestrutura do Cliente", desc: "Contas criadas nas plataformas Vercel (hospedagem), Supabase (base de dados) e Umami (Analytics)." },
+            { title: "Parceria Técnica", desc: "A Vilela CodeLab entra como parceiro técnico do cliente, garantindo alta disponibilidade." }
         ],
         timeline: [
-            "Fase 1: Imersão e Arquitetura (Dias 1-4)",
-            "Fase 2: Design System & Protótipo (Dias 5-10)",
-            "Fase 3: Desenvolvimento e Stress Tests (Dias 11-20)",
-            "Fase 4: Homologação e Lançamento (Dias 21-30)"
+            "Fase 1: Imersão (Semana 1)",
+            "Fase 2: Desenvolvimento (Semanas 2-3)",
+            "Fase 3: Homologação (Semana 4)"
         ]
     }
 };

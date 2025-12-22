@@ -45,6 +45,7 @@ const Pricing: React.FC<PricingProps> = ({ onQuoteRequest = () => { } }) => {
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch">
+
         {/* Plano: Express */}
         <div className="group relative flex flex-col gap-4 rounded-2xl border border-white/5 bg-[#0F172A] p-8 hover:-translate-y-2 transition-all duration-500 shadow-lg glass-effect">
           <div className="flex flex-col gap-1">
@@ -62,7 +63,7 @@ const Pricing: React.FC<PricingProps> = ({ onQuoteRequest = () => { } }) => {
               { title: "Gestão Web", desc: "Gestão da infraestrutura e manutenções." },
               { title: "Mobile-First", desc: "Prioridade em smartphones." },
               { title: "Alta Conversão", desc: "Foco em conversão de clientes." },
-              { title: "Site entregue em 72 horas", desc: "Entrega ultra-rápida." }
+              { title: "Entregue em 72 horas", desc: "Entrega ultra-rápida." }
             ].map((item, i) => (
               <div key={i} className="flex gap-4 items-start">
                 <span className="material-symbols-outlined text-primary text-xl">check_circle</span>
