@@ -59,9 +59,9 @@ const Pricing: React.FC<PricingProps> = ({ onQuoteRequest = () => { } }) => {
           <div className="h-px bg-gradient-to-r from-primary/20 via-primary/5 to-transparent w-full my-4"></div>
           <div className="flex flex-col gap-5 flex-1">
             {[
-              { title: "Gestão Web", desc: "Nós cuidamos de toda a infraestrutura e manutenções." },
+              { title: "Gestão Web", desc: "Gestão da infraestrutura e manutenções." },
               { title: "Mobile-First", desc: "Prioridade em smartphones." },
-              { title: "Alta Conversão", desc: "Foco total em conversão de clientes." },
+              { title: "Alta Conversão", desc: "Foco em conversão de clientes." },
               { title: "Site entregue em 72 horas", desc: "Entrega ultra-rápida." }
             ].map((item, i) => (
               <div key={i} className="flex gap-4 items-start">
@@ -92,7 +92,7 @@ const Pricing: React.FC<PricingProps> = ({ onQuoteRequest = () => { } }) => {
           <div className="h-px bg-primary/20 w-full my-4"></div>
           <div className="flex flex-col gap-5 flex-1">
             {[
-              { title: "Automação de Leads", desc: "Sistema inteligente que entrega notificações em tempo real." },
+              { title: "Automação de Leads", desc: "Entrega de notificações em tempo real." },
               { title: "Análise de Dados", desc: "Monitoramento de métricas e insights." },
               { title: "Design System", desc: "Identidade proprietária" },
               { title: "CMS Gerenciável", desc: "Painel Admin intuitivo." }
@@ -131,7 +131,7 @@ const Pricing: React.FC<PricingProps> = ({ onQuoteRequest = () => { } }) => {
               { title: "Squad Dedicada", desc: "Desenvolvimento e Design Exclusivo." },
               { title: "Infraestrutura Completa", desc: "Configuração enterprise nas contas do cliente." },
               { title: "SLA Prioritário", desc: "Atendimento técnico de alta resposta." },
-              { title: "Parceria Técnica", desc: "Atuamos como seu braço direito na engenharia web." }
+              { title: "Parceria Técnica", desc: "Somos o seu braço direito na engenharia web." }
             ].map((item, i) => (
               <div key={i} className="flex gap-4 items-start">
                 <span className="material-symbols-outlined text-primary text-xl">hub</span>
