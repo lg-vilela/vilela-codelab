@@ -24,10 +24,7 @@ const Pricing: React.FC<PricingProps> = ({ onQuoteRequest = () => { } }) => {
       </button>
       <button
         onClick={onQuoteRequest}
-        className={`flex items-center justify-center rounded-lg py-3 px-2 text-[11px] font-bold transition-all cursor-pointer shadow-md h-auto whitespace-normal text-center ${isFeatured
-          ? 'bg-primary hover:bg-primary-dark text-white scale-100 hover:scale-[1.02] active:scale-95'
-          : 'bg-white/10 hover:bg-white/20 text-white border border-white/5'
-          }`}
+        className="flex items-center justify-center rounded-lg py-3 px-2 text-[11px] font-bold transition-all cursor-pointer shadow-md h-auto whitespace-normal text-center bg-primary hover:bg-primary-dark text-white scale-100 hover:scale-[1.02] active:scale-95"
       >
         <span>Falar com Consultor</span>
       </button>
