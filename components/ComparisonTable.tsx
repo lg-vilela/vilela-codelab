@@ -146,7 +146,7 @@ const ComparisonTable: React.FC = () => {
             </div>
 
             <div className="mt-8 flex justify-center">
-                <p className="text-slate-600 text-[10px] uppercase tracking-widest text-center max-w-2xl px-4 flex items-center gap-2">
+                <p className="text-white text-[10px] uppercase tracking-widest text-center max-w-2xl px-4 flex items-center gap-2">
                     <span className="material-symbols-outlined text-base">info</span>
                     Todos os planos incluem suporte técnico e garantia de funcionamento (SLA).
                 </p>
