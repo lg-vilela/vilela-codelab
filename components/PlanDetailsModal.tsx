@@ -30,7 +30,7 @@ const planDetails = {
                     { title: "Gestão de Infraestrutura", desc: "A página é hospedada e gerida integralmente em servidores da Vilela CodeLab." },
                     { title: "Custos de Terceiros", desc: "Todos os custos de licenciamento e hospedagem profissional já estão inclusos no valor da assinatura." },
                     { title: "Propriedade (IP)", desc: "O código-base pertence à Vilela CodeLab, sendo concedido o direito de uso enquanto a assinatura estiver ativa." },
-                    { title: "Taxa de Migração", desc: "Caso deseje a posse definitiva do projeto no futuro, aplica-se uma taxa de R$ 1.000,00 para transferência." }
+                    { title: "Taxa de Migração", desc: "Caso deseje a posse definitiva do projeto no futuro, aplica-se uma taxa para transferência." }
                 ]
             }
         },
@@ -64,7 +64,7 @@ const planDetails = {
                 description: "Ideal para quem deseja adquirir um ativo digital robusto com total independência.\nNeste modelo, desenvolvemos sua infraestrutura de inteligência diretamente em suas contas proprietárias, garantindo a posse absoluta do seu software.",
                 features: [
                     { title: "Objetivo Estratégico", desc: "Aquisição de um ativo digital independente e escalável para a sua empresa." },
-                    { title: "Infraestrutura Independente", desc: "Configuração profissional realizada diretamente nas contas do cliente (Vercel, Supabase e Umami)." },
+                    { title: "Infraestrutura Independente", desc: "Configuração profissional realizada diretamente nas contas do cliente." },
                     { title: "Modelagem de Dados", desc: "Arquitetura de banco de dados exclusiva para gestão autônoma de leads." },
                     { title: "Custos de Terceiros", desc: "O cliente assume diretamente as mensalidades dos provedores de infraestrutura." },
                     { title: "Propriedade (IP)", desc: "O código-fonte e todos os ativos são 100% de propriedade do cliente após a entrega." },
@@ -79,9 +79,10 @@ const planDetails = {
             { title: "Análise de Dados", desc: "Monitoramento avançado de comportamento e métricas de conversão." }
         ],
         timeline: [
-            "Fase 1: Estratégia (Dias 1-2): Alinhamento de objetivos e definição de modelagem de dados.",
-            "Fase 2: Design & Dev (Dias 3-10): Engenharia de software e construção da interface exclusiva.",
-            "Fase 3: Entrega (Dias 11-15): Testes de integração, automações e entrega técnica final."
+            "Fase 1: Estratégia: Alinhamento de objetivos e definição de modelagem de dados.",
+            "Fase 2: Design & Dev: Engenharia de software e construção da interface exclusiva.",
+            "Fase 3: Entrega: Testes de integração, automações e entrega técnica final.",
+            "Nota: O tempo de entrega total varia de acordo com o escopo e tamanho do projeto."
         ]
     },
     premium: {
