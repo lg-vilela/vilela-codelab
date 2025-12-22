@@ -31,6 +31,7 @@ const planDetails = {
             { title: "Modo 1: Gestão Centralizada (Assinatura)", desc: "Foco total em vendas e tração. Nós assumimos toda a complexidade técnica: da hospedagem de elite às automações de leads e análise de performance em tempo real. Ideal para empresas que buscam agilidade e manutenção técnica inclusa." },
             { title: "Modo 2: Ativo Independente (Projeto)", desc: "Para empresas que exigem a posse absoluta do seu patrimônio digital. Desenvolvemos seu sistema em infraestrutura proprietária, entregando o código-fonte finalizado e total autonomia técnica para sua equipe." },
             { title: "Regra de Ouro (Modo Projeto)", desc: "Garantimos a propriedade total do código e dos dados ao cliente." },
+            { title: "Diferenciais Técnicos", desc: "" },
             { title: "Ecossistema de Dados", desc: "Monitoramento avançado de métricas sem comprometer a velocidade de carregamento." },
             { title: "Automação Direta", desc: "Receba notificações de leads instantaneamente em seus canais oficiais de comunicação." },
             { title: "Infraestrutura Enterprise", desc: "Configuração de arquitetura em nuvem otimizada para segurança e escala (Infraestrutura de Nuvem Independente)." }
@@ -96,13 +97,21 @@ const PlanDetailsModal: React.FC<PlanDetailsModalProps> = ({ isOpen, onClose, pl
                     <div className="flex flex-col gap-6 mt-4">
                         {content.features.map((feature, idx) => (
                             <div key={idx} className="flex flex-col gap-1">
-                                <h3 className="text-white font-bold text-sm flex items-center gap-2">
-                                    <span className="material-symbols-outlined text-primary text-base">check_circle</span>
-                                    {feature.title}
-                                </h3>
-                                <p className="text-slate-400 text-xs pl-6 leading-relaxed">
-                                    {feature.desc}
-                                </p>
+                                {feature.desc ? (
+                                    <>
+                                        <h3 className="text-white font-bold text-sm flex items-center gap-2">
+                                            <span className="material-symbols-outlined text-primary text-base">check_circle</span>
+                                            {feature.title}
+                                        </h3>
+                                        <p className="text-slate-400 text-xs pl-6 leading-relaxed">
+                                            {feature.desc}
+                                        </p>
+                                    </>
+                                ) : (
+                                    <h3 className="text-primary font-black uppercase tracking-[0.2em] text-xs mt-4 mb-2 pb-2 border-b border-white/5">
+                                        {feature.title}
+                                    </h3>
+                                )}
                             </div>
                         ))}
                     </div>
