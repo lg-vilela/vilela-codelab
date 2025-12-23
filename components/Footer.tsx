@@ -78,7 +78,7 @@ const Footer: React.FC = () => {
                   </svg>
                 </a>
                 <a
-                  href="mailto:contato@vilelacodelab.com"
+                  href="mailto:vilelainf@outlook.com"
                   className="w-10 h-10 rounded-lg bg-white/5 flex items-center justify-center text-slate-400 hover:bg-sky-500 hover:text-white transition-all duration-300 border border-white/5"
                   aria-label="Email"
                 >
