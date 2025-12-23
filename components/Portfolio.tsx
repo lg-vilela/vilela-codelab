@@ -57,13 +57,22 @@ const Portfolio: React.FC = () => {
                             rel="noopener noreferrer"
                             className="group flex flex-col bg-[#0F172A] border border-white/5 rounded-2xl overflow-hidden hover:border-primary/50 hover:shadow-[0_0_30px_rgba(56,189,248,0.2)] transition-all duration-500 ease-out hover:-translate-y-2"
                         >
-                            {/* "Cover Image" Placeholder area */}
+                            {/* Website Preview (Iframe Mockup) */}
                             <div className={`h-48 w-full bg-gradient-to-br ${project.color} relative overflow-hidden`}>
-                                <div className="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors duration-500"></div>
-                                <div className="absolute inset-0 flex items-center justify-center opacity-30 group-hover:opacity-100 group-hover:scale-110 transition-all duration-700">
-                                    <span className="material-symbols-outlined text-white text-6xl drop-shadow-xl">{project.icon}</span>
-                                </div>
-                                <div className="absolute bottom-0 left-0 w-full h-1/2 bg-gradient-to-t from-[#0F172A] to-transparent"></div>
+                                {/* Iframe acting as a thumbnail */}
+                                <iframe
+                                    src={project.url}
+                                    title={`Preview of ${project.title}`}
+                                    className="w-[400%] h-[400%] absolute top-0 left-0 scale-[0.25] origin-top-left pointer-events-none opacity-90"
+                                    loading="lazy"
+                                    scrolling="no"
+                                    tabIndex={-1}
+                                    aria-hidden="true"
+                                />
+
+                                {/* Overlay for hover effect */}
+                                <div className="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-colors duration-500"></div>
+                                <div className="absolute bottom-0 left-0 w-full h-1/3 bg-gradient-to-t from-[#0F172A] to-transparent"></div>
                             </div>
 
                             {/* Content Area */}
