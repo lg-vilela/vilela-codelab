@@ -39,11 +39,14 @@ const Portfolio: React.FC = () => {
                 {/* Header */}
                 <div className="flex flex-col gap-2 items-center text-center">
                     <div className="text-primary font-black tracking-[0.4em] uppercase text-[9px] mb-1">Nosso Trabalho</div>
-                    <h2 className="text-white text-4xl md:text-5xl font-black tracking-tighter uppercase text-glow-primary leading-none">
+                    <h2 className="text-white text-3xl md:text-4xl font-black tracking-tighter uppercase text-glow-primary leading-none">
                         Cases de <span className="text-primary italic">Sucesso</span>
                     </h2>
                     <p className="text-slate-400 text-lg md:text-xl max-w-[720px] font-medium leading-relaxed mt-4">
                         Explore algumas das experiências digitais que construímos.
+                    </p>
+                    <p className="text-slate-500 text-xs max-w-[500px] mt-2 italic border border-white/5 bg-white/5 px-4 py-2 rounded-lg">
+                        * Amostras de interface desenvolvidas pela Vilela CodeLab para fins de demonstração.
                     </p>
                 </div>
 
