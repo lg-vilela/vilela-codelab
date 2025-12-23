@@ -10,7 +10,7 @@ const FAQ: React.FC = () => {
         },
         {
             question: "Preciso contratar um servidor próprio no Modo Projeto?",
-            answer: "Sim. No Modo Projeto, configuramos tudo diretamente em suas contas de infraestrutura (Vercel, Supabase, etc.). Você será o titular direto dos contratos, garantindo independência total. Nós te orientamos em todo o processo de contratação."
+            answer: "Sim. No Modo Projeto, configuramos tudo diretamente em suas contas de infraestrutura (hospedagem, banco de dados, etc.). Você será o titular direto dos contratos, garantindo independência total. Nós te orientamos em todo o processo de contratação."
         },
         {
             question: "Como funciona o suporte no Modo Assinatura?",
@@ -30,7 +30,7 @@ const FAQ: React.FC = () => {
         },
         {
             question: "Quais formas de pagamento são aceitas?",
-            answer: "Trabalhamos com PIX e Cartão de Crédito. Para projetos Enterprise ou de maior escopo, podemos estruturar parcelamentos conforme o cronograma de entregas."
+            answer: "Trabalhamos com PIX e Cartão de Crédito, com parcelamentos conforme o valor e cronograma de entregas."
         }
     ];
 
