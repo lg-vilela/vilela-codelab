@@ -39,7 +39,7 @@ const FAQ: React.FC = () => {
             {/* Background Ambience */}
             <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-primary/5 rounded-full blur-[100px] -z-10 animate-pulse-slow"></div>
 
-            <div className="max-w-6xl mx-auto flex flex-col md:flex-row gap-16 items-start">
+            <div className="w-full max-w-[90vw] lg:max-w-[85vw] mx-auto flex flex-col md:flex-row gap-16 items-start">
 
                 {/* FAQ Section */}
                 <div className="flex-1 flex flex-col gap-8 w-full">
@@ -55,8 +55,8 @@ const FAQ: React.FC = () => {
                             <div
                                 key={idx}
                                 className={`border rounded-2xl transition-all duration-300 ${openIndex === idx
-                                        ? 'bg-[#0F172A] border-primary/50 shadow-[0_0_20px_rgba(56,189,248,0.1)]'
-                                        : 'bg-white/5 border-white/5 hover:bg-white/10'
+                                    ? 'bg-[#0F172A] border-primary/50 shadow-[0_0_20px_rgba(56,189,248,0.1)]'
+                                    : 'bg-white/5 border-white/5 hover:bg-white/10'
                                     }`}
                             >
                                 <button
@@ -85,54 +85,37 @@ const FAQ: React.FC = () => {
                     </div>
                 </div>
 
-                {/* Contact Form Section */}
+                {/* Contact Card Section */}
                 <div className="w-full md:w-[420px] shrink-0 sticky top-24">
                     <div className="p-8 rounded-3xl bg-gradient-to-br from-[#0F172A] to-[#1e293b] border border-white/10 shadow-2xl relative overflow-hidden group">
                         <div className="absolute inset-0 bg-primary/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
 
-                        <div className="relative z-10 flex flex-col gap-6">
-                            <div>
+                        <div className="relative z-10 flex flex-col gap-6 text-center">
+                            <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mx-auto border border-primary/20 shadow-[0_0_30px_rgba(56,189,248,0.15)] group-hover:scale-110 transition-transform duration-500">
+                                <span className="material-symbols-outlined text-primary text-3xl">chat</span>
+                            </div>
+
+                            <div className="flex flex-col gap-2">
                                 <h3 className="text-white font-black uppercase tracking-wider text-xl">Ainda com dúvidas?</h3>
-                                <p className="text-slate-400 text-xs mt-2 font-medium">
-                                    Preencha o formulário e nosso time técnico entrará em contato em breve.
+                                <p className="text-slate-400 text-sm font-medium leading-relaxed">
+                                    Nossa equipe técnica está pronta para analisar seu projeto e responder suas perguntas agora mesmo.
                                 </p>
                             </div>
 
-                            <form className="flex flex-col gap-4">
-                                <div className="flex flex-col gap-1">
-                                    <label className="text-[10px] uppercase font-bold tracking-widest text-slate-500 ml-1">Nome</label>
-                                    <input
-                                        type="text"
-                                        placeholder="Seu nome completo"
-                                        className="bg-black/40 border border-white/10 rounded-xl px-4 py-3 text-sm text-white placeholder:text-slate-600 focus:outline-none focus:border-primary/50 focus:bg-black/60 transition-all font-medium"
-                                    />
-                                </div>
+                            <a
+                                href="https://wa.me/5511953840339"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="flex items-center justify-center gap-3 bg-[#25D366] hover:bg-[#20bd5a] text-white font-black uppercase tracking-widest text-xs py-4 px-6 rounded-xl shadow-[0_0_20px_rgba(37,211,102,0.3)] hover:shadow-[0_0_30px_rgba(37,211,102,0.5)] hover:scale-[1.02] active:scale-95 transition-all duration-300"
+                            >
+                                <span className="material-symbols-outlined text-lg">chat</span>
+                                Falar no WhatsApp
+                            </a>
 
-                                <div className="flex flex-col gap-1">
-                                    <label className="text-[10px] uppercase font-bold tracking-widest text-slate-500 ml-1">Email</label>
-                                    <input
-                                        type="email"
-                                        placeholder="seu@email.com"
-                                        className="bg-black/40 border border-white/10 rounded-xl px-4 py-3 text-sm text-white placeholder:text-slate-600 focus:outline-none focus:border-primary/50 focus:bg-black/60 transition-all font-medium"
-                                    />
-                                </div>
-
-                                <div className="flex flex-col gap-1">
-                                    <label className="text-[10px] uppercase font-bold tracking-widest text-slate-500 ml-1">Mensagem</label>
-                                    <textarea
-                                        rows={4}
-                                        placeholder="Como podemos te ajudar?"
-                                        className="bg-black/40 border border-white/10 rounded-xl px-4 py-3 text-sm text-white placeholder:text-slate-600 focus:outline-none focus:border-primary/50 focus:bg-black/60 transition-all resize-none font-medium"
-                                    ></textarea>
-                                </div>
-
-                                <button
-                                    type="button"
-                                    className="mt-2 bg-primary hover:bg-primary-dark text-white font-black uppercase tracking-widest text-xs py-4 rounded-xl shadow-[0_0_20px_rgba(56,189,248,0.3)] hover:shadow-[0_0_30px_rgba(56,189,248,0.5)] hover:scale-[1.02] active:scale-95 transition-all duration-300"
-                                >
-                                    Enviar Mensagem
-                                </button>
-                            </form>
+                            <div className="flex items-center justify-center gap-2 text-[10px] text-slate-500 font-bold uppercase tracking-widest mt-2">
+                                <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span>
+                                Online Agora
+                            </div>
                         </div>
                     </div>
                 </div>
