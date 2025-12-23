@@ -125,11 +125,11 @@ const Footer: React.FC = () => {
                 <span className="text-[10px] font-black tracking-[0.2em] text-slate-500 uppercase group-hover:text-slate-300 transition-colors">
                   Developed By
                 </span>
-                <div className="h-8 w-[1px] bg-white/10 group-hover:bg-white/20 transition-colors"></div>
+                <div className="h-12 w-[1px] bg-white/10 group-hover:bg-white/20 transition-colors"></div>
                 <img
                   src="/vilela-logo.png"
                   alt="Vilela CodeLab"
-                  className="h-14 w-auto opacity-70 grayscale group-hover:opacity-100 group-hover:grayscale-0 transition-all duration-300 hover:scale-105"
+                  className="h-20 w-auto opacity-70 grayscale group-hover:opacity-100 group-hover:grayscale-0 transition-all duration-300 hover:scale-105"
                 />
               </div>
             </div>
