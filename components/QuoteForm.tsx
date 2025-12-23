@@ -155,7 +155,7 @@ const QuoteForm: React.FC<QuoteFormProps> = ({ onBack }) => {
 
               <div className="flex flex-col gap-2 group/input md:col-span-2">
                 <label className="text-[10px] font-black text-primary/60 uppercase tracking-widest px-1">
-                  [05] URL da sua Rede Social profissional ou de sua Empresa
+                  [05] Link da sua Rede Social profissional ou de sua Empresa
                 </label>
                 <input
                   type="url"
