@@ -10,7 +10,7 @@ const QuoteForm: React.FC<QuoteFormProps> = ({ onBack }) => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
   const [errorMessage, setErrorMessage] = useState<string | null>(null);
-  
+
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -51,7 +51,7 @@ const QuoteForm: React.FC<QuoteFormProps> = ({ onBack }) => {
         ]);
 
       if (error) throw error;
-      
+
       setIsSuccess(true);
     } catch (error: any) {
       console.error('Erro ao enviar protocolo:', error);
@@ -68,19 +68,19 @@ const QuoteForm: React.FC<QuoteFormProps> = ({ onBack }) => {
           <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 w-20 h-20 rounded-full bg-primary flex items-center justify-center shadow-[0_0_40px_rgba(94,125,162,0.6)]">
             <span className="material-symbols-outlined text-white text-5xl">task_alt</span>
           </div>
-          
+
           <div className="mt-8 flex flex-col gap-6">
             <div className="text-primary font-black tracking-[0.5em] uppercase text-[10px]">Transmission Complete</div>
             <h2 className="text-white text-4xl md:text-5xl font-black uppercase tracking-tighter text-glow-primary">
               Protocolo <span className="text-primary italic">Sincronizado</span>
             </h2>
             <p className="text-slate-400 text-lg font-medium leading-relaxed">
-              Obrigado, <span className="text-white font-bold">{formData.name}</span>. <br/>
+              Obrigado, <span className="text-white font-bold">{formData.name}</span>. <br />
               Seus dados foram injetados em nosso núcleo de processamento. Nossa equipe técnica iniciará o diagnóstico em breve.
             </p>
-            
+
             <div className="flex flex-col items-center gap-4 mt-8">
-              <button 
+              <button
                 onClick={onBack}
                 className="px-10 py-5 bg-primary text-white font-black rounded-xl hover:scale-105 active:scale-95 transition-all tracking-[0.2em] uppercase text-xs"
               >
@@ -96,10 +96,10 @@ const QuoteForm: React.FC<QuoteFormProps> = ({ onBack }) => {
   return (
     <div className="flex flex-col items-center justify-center min-h-[calc(100vh-80px)] px-4 py-10 w-full animate-fade-in-down">
       <div className="w-full max-w-4xl relative group">
-        
+
         {/* HUD Navigation */}
         <div className="absolute -top-10 left-0 flex items-center gap-3">
-          <button 
+          <button
             onClick={onBack}
             disabled={isSubmitting}
             type="button"
@@ -111,7 +111,7 @@ const QuoteForm: React.FC<QuoteFormProps> = ({ onBack }) => {
         </div>
 
         {/* Main Terminal Container */}
-        <div 
+        <div
           className={`relative bg-[#0F172A]/80 border border-primary/30 p-8 md:p-12 shadow-[0_0_60px_rgba(94,125,162,0.15)] glass-effect overflow-hidden transition-all ${isSubmitting ? 'opacity-70 grayscale-[0.5]' : ''}`}
           style={{ clipPath: 'polygon(0 40px, 40px 0, 100% 0, 100% calc(100% - 40px), calc(100% - 40px) 100%, 0 100%)' }}
         >
@@ -141,29 +141,29 @@ const QuoteForm: React.FC<QuoteFormProps> = ({ onBack }) => {
                   <label className="text-[10px] font-black text-primary/60 uppercase tracking-widest px-1">
                     [{field.id}] {field.label} {field.required && <span className="text-red-500/50">*</span>}
                   </label>
-                  <input 
+                  <input
                     type={field.type}
                     required={field.required}
                     disabled={isSubmitting}
                     className="bg-white/5 border border-white/10 rounded-lg px-5 py-4 text-white text-sm font-medium focus:outline-none focus:border-primary focus:bg-primary/5 transition-all placeholder:text-white/10 disabled:opacity-50"
                     placeholder={field.placeholder}
                     value={(formData as any)[field.key]}
-                    onChange={e => setFormData({...formData, [field.key]: e.target.value})}
+                    onChange={e => setFormData({ ...formData, [field.key]: e.target.value })}
                   />
                 </div>
               ))}
-              
+
               <div className="flex flex-col gap-2 group/input md:col-span-2">
                 <label className="text-[10px] font-black text-primary/60 uppercase tracking-widest px-1">
-                  [05] URL do Site Atual ou Rede Social
+                  [05] URL da sua Rede Social profissional ou de sua Empresa
                 </label>
-                <input 
+                <input
                   type="url"
                   disabled={isSubmitting}
                   className="bg-white/5 border border-white/10 rounded-lg px-5 py-4 text-white text-sm font-medium focus:outline-none focus:border-primary focus:bg-primary/5 transition-all placeholder:text-white/10 disabled:opacity-50"
                   placeholder="https://seuprojeto.com.br"
                   value={formData.siteUrl}
-                  onChange={e => setFormData({...formData, siteUrl: e.target.value})}
+                  onChange={e => setFormData({ ...formData, siteUrl: e.target.value })}
                 />
               </div>
             </div>
@@ -173,107 +173,111 @@ const QuoteForm: React.FC<QuoteFormProps> = ({ onBack }) => {
                 [06] Plano Desejado <span className="text-red-500/50">*</span>
               </label>
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-                {['Express', 'Pro', 'Premium'].map((plan) => (
-                  <div 
+                {['Express', 'Pro', 'Premium', 'Recomendação'].map((plan) => (
+                  <div
                     key={plan}
-                    onClick={() => !isSubmitting && setFormData({...formData, planType: plan})}
-                    className={`relative cursor-pointer transition-all duration-300 p-5 border-2 rounded-xl flex flex-col gap-2 ${
-                      formData.planType === plan 
-                        ? 'bg-primary/20 border-primary text-white shadow-[0_0_25px_rgba(94,125,162,0.3)]' 
-                        : 'bg-white/5 border-white/5 text-slate-500 hover:border-primary/40'
-                    }`}
+                    onClick={() => !isSubmitting && setFormData({ ...formData, planType: plan })}
+                    className={`relative cursor-pointer transition-all duration-300 p-5 border-2 rounded-xl flex flex-col gap-2 ${formData.planType === plan
+                      ? 'bg-primary/20 border-primary text-white shadow-[0_0_25px_rgba(94,125,162,0.3)]'
+                      : 'bg-white/5 border-white/5 text-slate-500 hover:border-primary/40'
+                      }`}
                   >
                     <span className="text-xs font-black uppercase tracking-[0.2em]">{plan}</span>
-                    <span className="text-[9px] opacity-60 uppercase">{plan === 'Express' ? 'Validação' : plan === 'Pro' ? 'Conversão' : 'Escala Total'}</span>
+                    <span className="text-[9px] opacity-60 uppercase">
+                      {plan === 'Express' ? 'Validação' :
+                        plan === 'Pro' ? 'Conversão' :
+                          plan === 'Premium' ? 'Escala Total' :
+                            'Não sei qual escolher'}
+                    </span>
                   </div>
                 ))}
               </div>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-               <div className="flex flex-col gap-4">
-                  <label className="text-[10px] font-black text-primary/60 uppercase tracking-widest px-1">
-                    [07] Objetivo Principal <span className="text-red-500/50">*</span>
-                  </label>
-                  <select 
-                    required
-                    disabled={isSubmitting}
-                    value={formData.objective}
-                    onChange={e => setFormData({...formData, objective: e.target.value})}
-                    className="bg-white/5 border border-white/10 rounded-xl px-5 py-4 text-white text-sm font-medium focus:outline-none focus:border-primary focus:bg-primary/5 transition-all appearance-none cursor-pointer"
-                  >
-                    <option className="bg-[#0F172A]" value="Vendas Diretas">Vendas Diretas</option>
-                    <option className="bg-[#0F172A]" value="Captação de Leads">Captação de Leads</option>
-                    <option className="bg-[#0F172A]" value="Autoridade de Marca">Autoridade de Marca</option>
-                  </select>
-               </div>
-               <div className="flex flex-col gap-4">
-                  <label className="text-[10px] font-black text-primary/60 uppercase tracking-widest px-1">
-                    [08] Fonte de Tráfego
-                  </label>
-                  <select 
-                    disabled={isSubmitting}
-                    value={formData.trafficSource}
-                    onChange={e => setFormData({...formData, trafficSource: e.target.value})}
-                    className="bg-white/5 border border-white/10 rounded-xl px-5 py-4 text-white text-sm font-medium focus:outline-none focus:border-primary focus:bg-primary/5 transition-all appearance-none cursor-pointer"
-                  >
-                    <option className="bg-[#0F172A]" value="Não definido">Não definido</option>
-                    <option className="bg-[#0F172A]" value="Instagram">Instagram</option>
-                    <option className="bg-[#0F172A]" value="Google Ads">Google Ads</option>
-                    <option className="bg-[#0F172A]" value="Orgânico">Orgânico</option>
-                  </select>
-               </div>
+              <div className="flex flex-col gap-4">
+                <label className="text-[10px] font-black text-primary/60 uppercase tracking-widest px-1">
+                  [07] Objetivo Principal <span className="text-red-500/50">*</span>
+                </label>
+                <select
+                  required
+                  disabled={isSubmitting}
+                  value={formData.objective}
+                  onChange={e => setFormData({ ...formData, objective: e.target.value })}
+                  className="bg-white/5 border border-white/10 rounded-xl px-5 py-4 text-white text-sm font-medium focus:outline-none focus:border-primary focus:bg-primary/5 transition-all appearance-none cursor-pointer"
+                >
+                  <option className="bg-[#0F172A]" value="Vendas Diretas">Quero vender mais online</option>
+                  <option className="bg-[#0F172A]" value="Captação de Leads">Quero receber mais contatos (Orçamentos/Agendamentos)</option>
+                  <option className="bg-[#0F172A]" value="Autoridade de Marca">Quero fortalecer minha marca profissional</option>
+                </select>
+              </div>
+              <div className="flex flex-col gap-4">
+                <label className="text-[10px] font-black text-primary/60 uppercase tracking-widest px-1">
+                  [08] Como os clientes te encontram hoje?
+                </label>
+                <select
+                  disabled={isSubmitting}
+                  value={formData.trafficSource}
+                  onChange={e => setFormData({ ...formData, trafficSource: e.target.value })}
+                  className="bg-white/5 border border-white/10 rounded-xl px-5 py-4 text-white text-sm font-medium focus:outline-none focus:border-primary focus:bg-primary/5 transition-all appearance-none cursor-pointer"
+                >
+                  <option className="bg-[#0F172A]" value="Não definido">Não definido</option>
+                  <option className="bg-[#0F172A]" value="Instagram">Instagram</option>
+                  <option className="bg-[#0F172A]" value="Google Ads">Google Ads</option>
+                  <option className="bg-[#0F172A]" value="Orgânico">Orgânico</option>
+                </select>
+              </div>
             </div>
 
             <div className="grid grid-cols-1 gap-6">
-               <div className="flex flex-col gap-2">
-                  <label className="text-[10px] font-black text-primary/60 uppercase tracking-widest px-1">
-                    [09] Referência Visual
-                  </label>
-                  <input 
-                    type="text"
-                    disabled={isSubmitting}
-                    className="bg-white/5 border border-white/10 rounded-lg px-5 py-4 text-white text-sm font-medium focus:outline-none focus:border-primary focus:bg-primary/5 transition-all placeholder:text-white/10"
-                    placeholder="Ex: apple.com"
-                    value={formData.visualReference}
-                    onChange={e => setFormData({...formData, visualReference: e.target.value})}
-                  />
-               </div>
-               
-               <div className="flex flex-col gap-2">
-                  <label className="text-[10px] font-black text-primary/60 uppercase tracking-widest px-1">
-                    [10] Principal "Dor" Atual <span className="text-red-500/50">*</span>
-                  </label>
-                  <input 
-                    type="text"
-                    required
-                    disabled={isSubmitting}
-                    className="bg-white/5 border border-white/10 rounded-lg px-5 py-4 text-white text-sm font-medium focus:outline-none focus:border-primary focus:bg-primary/5 transition-all placeholder:text-white/10"
-                    placeholder="Ex: Baixa conversão"
-                    value={formData.mainProblem}
-                    onChange={e => setFormData({...formData, mainProblem: e.target.value})}
-                  />
-               </div>
-
-               <div className="flex flex-col gap-2">
+              <div className="flex flex-col gap-2">
                 <label className="text-[10px] font-black text-primary/60 uppercase tracking-widest px-1">
-                  [11] Manifesto do Projeto <span className="text-red-500/50">*</span>
+                  [09] Referência Visual
                 </label>
-                <textarea 
+                <input
+                  type="text"
+                  disabled={isSubmitting}
+                  className="bg-white/5 border border-white/10 rounded-lg px-5 py-4 text-white text-sm font-medium focus:outline-none focus:border-primary focus:bg-primary/5 transition-all placeholder:text-white/10"
+                  placeholder="Ex: apple.com"
+                  value={formData.visualReference}
+                  onChange={e => setFormData({ ...formData, visualReference: e.target.value })}
+                />
+              </div>
+
+              <div className="flex flex-col gap-2">
+                <label className="text-[10px] font-black text-primary/60 uppercase tracking-widest px-1">
+                  [10] Qual seu maior desafio hoje? <span className="text-red-500/50">*</span>
+                </label>
+                <input
+                  type="text"
+                  required
+                  disabled={isSubmitting}
+                  className="bg-white/5 border border-white/10 rounded-lg px-5 py-4 text-white text-sm font-medium focus:outline-none focus:border-primary focus:bg-primary/5 transition-all placeholder:text-white/10"
+                  placeholder="Ex: Baixa conversão"
+                  value={formData.mainProblem}
+                  onChange={e => setFormData({ ...formData, mainProblem: e.target.value })}
+                />
+              </div>
+
+              <div className="flex flex-col gap-2">
+                <label className="text-[10px] font-black text-primary/60 uppercase tracking-widest px-1">
+                  [11] Descrição, informações adicionais ou duvidas <span className="text-red-500/50">*</span>
+                </label>
+                <textarea
                   rows={3}
                   required
                   disabled={isSubmitting}
                   className="bg-white/5 border border-white/10 rounded-xl px-5 py-4 text-white text-sm font-medium focus:outline-none focus:border-primary focus:bg-primary/5 transition-all resize-none placeholder:text-white/10"
                   placeholder="Detalhes adicionais..."
                   value={formData.description}
-                  onChange={e => setFormData({...formData, description: e.target.value})}
+                  onChange={e => setFormData({ ...formData, description: e.target.value })}
                 ></textarea>
               </div>
             </div>
 
             <div className="mt-4 relative group/btn">
               <div className={`absolute -inset-1 bg-primary blur-lg opacity-20 transition-all ${isSubmitting ? 'animate-pulse opacity-60' : 'group-hover/btn:opacity-50'}`}></div>
-              <button 
+              <button
                 type="submit"
                 disabled={isSubmitting}
                 className={`relative w-full h-20 bg-primary text-white font-black tracking-[0.4em] uppercase text-xs flex items-center justify-center gap-4 transition-all shadow-2xl overflow-hidden ${isSubmitting ? 'cursor-wait' : 'hover:scale-[1.01] active:scale-95'}`}
