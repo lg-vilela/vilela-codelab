@@ -5,6 +5,7 @@ import Services from './components/Services';
 import Process from './components/Process';
 import Pricing from './components/Pricing';
 import FAQ from './components/FAQ';
+import Portfolio from './components/Portfolio';
 import CtaSection from './components/CtaSection';
 import Footer from './components/Footer';
 import QuoteForm from './components/QuoteForm';
@@ -65,6 +66,7 @@ export default function App() {
                 <Process />
                 <Pricing onQuoteRequest={() => handleNavigate('quote')} />
                 <FAQ />
+                <Portfolio />
                 <CtaSection onNavigate={() => handleNavigate('quote')} />
               </>
             ) : (
