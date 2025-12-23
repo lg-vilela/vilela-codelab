@@ -129,7 +129,7 @@ const Footer: React.FC = () => {
                 <img
                   src="/vilela-logo.png"
                   alt="Vilela CodeLab"
-                  className="h-10 w-auto opacity-70 grayscale group-hover:opacity-100 group-hover:grayscale-0 transition-all duration-300 hover:scale-105"
+                  className="h-14 w-auto opacity-70 grayscale group-hover:opacity-100 group-hover:grayscale-0 transition-all duration-300 hover:scale-105"
                 />
               </div>
             </div>
