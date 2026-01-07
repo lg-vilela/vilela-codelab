@@ -9,6 +9,7 @@ import Portfolio from './components/Portfolio';
 import CtaSection from './components/CtaSection';
 import Footer from './components/Footer';
 import QuoteForm from './components/QuoteForm';
+import FloatingWhatsApp from './components/FloatingWhatsApp';
 
 
 
@@ -53,6 +54,7 @@ export default function App() {
   return (
     <div className="bg-transparent font-display text-white overflow-x-hidden antialiased selection:bg-primary selection:text-white min-h-screen flex flex-col">
       <div className="layout-container flex h-full grow flex-col w-full">
+        <FloatingWhatsApp />
         <Navbar onNavigate={handleNavigate} />
 
         <main className="flex flex-1 justify-center py-5 w-full">
